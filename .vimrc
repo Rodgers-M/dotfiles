@@ -70,15 +70,22 @@ imap jj <ESC>
 imap kk <ESC>
 
 "moving between windows
-map <C-j> <C-W>j
-map <C-k> <C-W>k
-map <C-h> <C-W>h
-map <C-l> <C-W>l
+map <c-j> <c-w>j
+map <c-k> <c-w>k
+map <c-h> <c-w>h
+map <c-l> <c-w>l
 "vim-sorround mappings
 nmap <leader>mm) ysiw)
 nmap <leader>mm] ysiw]
 nmap <leader>mm} ysiw}
-"NERDTreeToogle shortcut
+"custom sorround mappings
+nmap <leader>qw bcw''<ESC>hp
+nmap <leader>dq bcw""<ESC>hp
+"sorround selected text in brackets, parenthesis, e.t.c
+vmap <leader>{ c{}<esc>hp
+vmap <leader>[ c[]<esc>hp
+vmap <leader>( c()<esc>hp
+"nerdtreeToogle shortcut
 nmap <C-a> :NERDTreeToggle<CR>
 
 "configurations for syntastic
@@ -105,4 +112,13 @@ let g:closetag_xhtml_filenames = '*.xhtml,*.js,*.jsx'
 let g:closetag_emptyTags_caseSensitive = 1
 " Shortcut for closing tags, default is '>'
 "
+imap ;d <div Classname=''><ESC>hi
+imap ;p <p>
+imap ;h <a href=''><ESc>hi
+imap ;li <li><ESC>hi
+imap ;h1 <h1><ESC>hi
 
+augroup myvimrc
+    au!
+    au BufWritePost .vimrc so ~/.vimrc
+augroup END
