@@ -53,11 +53,14 @@ noremap <Up> :m .-2<CR>==
 noremap <Down> :m .+1<CR>==
 noremap <Left> <NOP>
 noremap <Right> <NOP>
-
+"do nothing in insert mode
 imap <Up> <NOP>
 imap <Down> <NOP>
 imap <Left> <NOP>
 imap <Right> <NOP>
+"move selected lines up/down in visual mode
+vmap <Up> :m '<-2<CR>gv=gv
+vmap <Down> :m '>+1<CR>gv=gv
 
 "quick pairs
 imap <leader>" ""<ESC>i
@@ -69,11 +72,6 @@ imap <leader>< <><ESC>i
 imap jj <ESC>
 imap kk <ESC>
 
-"moving between windows
-map <c-j> <c-w>j
-map <c-k> <c-w>k
-map <c-h> <c-w>h
-map <c-l> <c-w>l
 "vim-sorround mappings
 nmap <leader>mm) ysiw)
 nmap <leader>mm] ysiw]
@@ -86,6 +84,12 @@ vmap <leader>{ c{}<esc>hp
 vmap <leader>[ c[]<esc>hp
 vmap <leader>( c()<esc>hp
 "nerdtreeToogle shortcut
+
+"moving between windows/splits
+map <c-j> <c-w>j
+map <c-k> <c-w>k
+map <c-h> <c-w>h
+map <c-l> <c-w>l
 nmap <C-a> :NERDTreeToggle<CR>
 
 "configurations for syntastic
