@@ -128,7 +128,6 @@ imap ;h <a href=''><ESc>hi
 imap ;li <li><esc>li
 imap ;h1 <h1><ESC>li
 imap ;im import   from ''<ESC>8hi
-:q
 
 
 augroup myvimrc
