@@ -117,11 +117,19 @@ let g:closetag_xhtml_filenames = '*.xhtml,*.js,*.jsx'
 let g:closetag_emptyTags_caseSensitive = 1
 " Shortcut for closing tags, default is '>'
 "
+" Trigger configuration (Optional)
+let g:UltiSnipsExpandTrigger="<C-l>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
 imap ;d <div Classname=''><ESC>li
 imap ;p <p>
 imap ;h <a href=''><ESc>hi
 imap ;li <li><esc>li
 imap ;h1 <h1><ESC>li
+imap ;im import   from ''<ESC>8hi
+:q
+
 
 augroup myvimrc
     au!
