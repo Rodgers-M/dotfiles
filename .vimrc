@@ -48,9 +48,9 @@ nmap <space> i<space><ESC>
 "fast saving of a buffer
 nmap <leader>w :w<cr>
 
-"disabling the arrow keys
-noremap <Up> <NOP>
-noremap <Down> <NOP>
+"disabling and remapping the arrow keys
+noremap <Up> :m .-2<CR>==
+noremap <Down> :m .+1<CR>==
 noremap <Left> <NOP>
 noremap <Right> <NOP>
 
@@ -99,6 +99,7 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_javascript_eslint_exe = 'npm run lint --'
 let g:ale_emit_conflict_warnings = 0
+let g:syntastic_python_checkers = ['flake8']
 nmap <leader>st :SyntasticToggleMode<CR>
 
 "cnfigurations for closetag plugin
@@ -112,11 +113,11 @@ let g:closetag_xhtml_filenames = '*.xhtml,*.js,*.jsx'
 let g:closetag_emptyTags_caseSensitive = 1
 " Shortcut for closing tags, default is '>'
 "
-imap ;d <div Classname=''><ESC>hi
+imap ;d <div Classname=''><ESC>li
 imap ;p <p>
 imap ;h <a href=''><ESc>hi
-imap ;li <li><ESC>hi
-imap ;h1 <h1><ESC>hi
+imap ;li <li><esc>li
+imap ;h1 <h1><ESC>li
 
 augroup myvimrc
     au!
