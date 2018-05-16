@@ -1,5 +1,3 @@
-syntax on
-
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 " let Vundle manage Vundle, required
@@ -79,6 +77,8 @@ nmap <leader>mm} ysiw}
 "custom sorround mappings
 nmap <leader>qw bcw''<ESC>hp
 nmap <leader>dq bcw""<ESC>hp
+vmap <leader>qw c''<ESC>hp
+vmap <leader>dq c""<ESC>hp
 "sorround selected text in brackets, parenthesis, e.t.c
 vmap <leader>{ c{}<esc>hp
 vmap <leader>[ c[]<esc>hp
@@ -122,12 +122,14 @@ let g:UltiSnipsExpandTrigger="<C-l>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
-imap ;d <div Classname=''><ESC>li
+imap ;d <div className=''><ESC>li
 imap ;p <p>
 imap ;h <a href=''><ESc>hi
 imap ;li <li><esc>li
 imap ;h1 <h1><ESC>li
-imap ;im import   from ''<ESC>8hi
+imap ;sp <span><ESC>li
+imap ;bt <button><ESC>li
+imap ;im import   from '';<ESC>9hi
 
 
 augroup myvimrc
