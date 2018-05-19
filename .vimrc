@@ -1,3 +1,5 @@
+syntax on
+
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 " let Vundle manage Vundle, required
@@ -7,6 +9,7 @@ so  ~/dotfiles/.vim/plugins.vim
 call vundle#end()            " required
 filetype plugin indent on    " required
 
+"show filename on status line
 set number
 "set this for fuzzy explorer
 set hidden
@@ -49,8 +52,8 @@ nmap <leader>w :w<cr>
 "disabling and remapping the arrow keys
 noremap <Up> :m .-2<CR>==
 noremap <Down> :m .+1<CR>==
-noremap <Left> <NOP>
-noremap <Right> <NOP>
+"noremap <Left> <NOP>
+"noremap <Right> <NOP>
 "do nothing in insert mode
 imap <Up> <NOP>
 imap <Down> <NOP>
@@ -91,11 +94,17 @@ map <c-k> <c-w>k
 map <c-h> <c-w>h
 map <c-l> <c-w>l
 nmap <C-a> :NERDTreeToggle<CR>
+"resize splits 
+nmap <Left> :vertical resize -5<CR>
+nmap <Right> :vertical resize +5<CR>
 
 "configurations for syntastic
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
+set ruler
 set statusline+=%*
+set statusline=2
+set statusline=%f
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
@@ -129,8 +138,7 @@ imap ;li <li><esc>li
 imap ;h1 <h1><ESC>li
 imap ;sp <span><ESC>li
 imap ;bt <button><ESC>li
-imap ;im import   from '';<ESC>9hi
-
+imap ;im import  from '';<ESC>8hi
 
 augroup myvimrc
     au!
