@@ -135,10 +135,16 @@ imap ;d <div className=''><ESC>li
 imap ;p <p>
 imap ;h <a href=''><ESc>hi
 imap ;li <li><esc>li
-imap ;h1 <h1><ESC>li
+map ;h1 <h1><ESC>li
 imap ;sp <span><ESC>li
 imap ;bt <button><ESC>li
 imap ;im import  from '';<ESC>8hi
+
+"lightline colorscheme
+set noshowmode
+let g:lightline = {
+      \ 'colorscheme': 'jellybeans',
+      \ }
 
 augroup myvimrc
     au!

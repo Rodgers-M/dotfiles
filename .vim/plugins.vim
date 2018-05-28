@@ -3,6 +3,8 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'bf4/vim-dark_eyes'
 Plugin 'HenryNewcomer/vim-theme-papaya'
 Plugin 'morhetz/gruvbox'
+"status line
+Plugin 'itchyny/lightline.vim'
 
 Plugin 'ervandew/supertab'
 Plugin 'pangloss/vim-javascript'
