@@ -1,12 +1,15 @@
 Plugin 'scrooloose/nerdtree'
+"colorschemes
+Plugin 'bf4/vim-dark_eyes'
+Plugin 'HenryNewcomer/vim-theme-papaya'
+Plugin 'morhetz/gruvbox'
+
 Plugin 'ervandew/supertab'
 Plugin 'pangloss/vim-javascript'
 Plugin 'tpope/vim-surround'
 Plugin 'gryf/pylint-vim'
 Plugin 'Galooshi/vim-import-js'
 Plugin 'alvan/vim-closetag'
-Plugin 'bf4/vim-dark_eyes'
-Plugin 'HenryNewcomer/vim-theme-papaya'
 Plugin 'wesQ3/vim-windowswap'
 Plugin 'SirVer/ultisnips'
 Plugin 'isRuslan/vim-es6'
