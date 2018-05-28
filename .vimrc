@@ -13,7 +13,7 @@ filetype plugin indent on    " required
 set number
 "set this for fuzzy explorer
 set hidden
-colorscheme atom-dark-256
+colorscheme gruvbox "atom-dark-256
 set cursorline
 set scrolloff=3
 set autochdir
@@ -43,7 +43,7 @@ map <leader><space> :nohlsearch<cr>
 nmap <leader>nl o<ESC>
 "add a new line above  the current
 nmap <leader>nL O<ESC>
-nmap <leader>a :q<cr>
+"nmap <leader>q :q<cr>
 nmap <space> i<space><ESC>
 
 "fast saving of a buffer
