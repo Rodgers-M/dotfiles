@@ -11,6 +11,7 @@ filetype plugin indent on    " required
 
 "show filename on status line
 set number
+set foldmethod=syntax
 "set this for fuzzy explorer
 set hidden
 colorscheme gruvbox "atom-dark-256
@@ -36,6 +37,7 @@ nnoremap <F5> :grep <C-R><C-W> *<CR>
 "a shortcut to edit vimrc file"
 let mapleader=',' "make comma the mapleader
 map <leader>ev :e ~/.vimrc<CR>
+map <leader>pv :e ~/dotfiles/.vim/plugins.vim<CR>
 map <leader>sv :so ~/.vimrc<CR>
 map <leader><space> :nohlsearch<cr>
  " adding new lines in normal mode
@@ -133,17 +135,32 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 imap ;d <div className=''><ESC>li
 imap ;p <p>
-imap ;h <a href=''><ESc>hi
+imap ;a <a href=''><ESc>hi
+imap ;ul <ul><esc>li
 imap ;li <li><esc>li
 map ;h1 <h1><ESC>li
+map ;h2 <h2<ESC>li
+map ;h3 <h3><ESC>li
+map ;h4 <h4><ESC>li
+map ;h5 <h5><ESC>li
 imap ;sp <span><ESC>li
-imap ;bt <button><ESC>li
+imap ;i <input type='text' placeholder=''><ESC>2hi
+imap ;bt <button className=''><ESC>li
 imap ;im import  from '';<ESC>8hi
+"importing objects
+imap ;cim import {  } from '';<ESC>10hi
+
+"Invoke CtrlP with starting directory
+nmap P :CtrlP 
+" ignore git files, node_modules and bower_components
+" it will load faster this way
+let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+let g:ctrlp_custom_ignore = 'node_modules\|bower_compnents\|DS_Store\|git'
 
 "lightline colorscheme
 set noshowmode
 let g:lightline = {
-      \ 'colorscheme': 'jellybeans',
+      \ 'colorscheme': 'wombat',
       \ }
 
 augroup myvimrc
