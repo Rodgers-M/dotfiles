@@ -20,6 +20,11 @@ set scrolloff=3
 set autochdir
 "specify buffers for autocomplete
 set complete=.,w,b,u
+"settings for auto saving files
+let g:auto_save = 1  " enable AutoSave on Vim startup
+let g:auto_save_no_updatetime = 1  " do not change the 'updatetime' option
+let g:auto_save_in_insert_mode = 0  " do not save while in insert mode
+
 "white space
 set backspace=eol,start,indent
 set wrap
@@ -113,6 +118,7 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_javascript_eslint_exe = 'npm run lint --'
+let b:ale_fixers = ['prettier', 'eslint']
 let g:ale_emit_conflict_warnings = 0
 let g:syntastic_python_checkers = ['flake8']
 nmap <leader>st :SyntasticToggleMode<CR>
@@ -124,6 +130,9 @@ let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.js,*.jsx'
 let g:closetag_xhtml_filenames = '*.xhtml,*.js,*.jsx'
 " integer value [0|1]
 " This will make the list of non-closing tags case-sensitive (e.g. `<Link>` will be closed while `<link>` won't.)
+" mappings for vim-js-import
+nnoremap <F5> :call JsFileImport()<CR>
+nnoremap <F6> :call SortJsFileImport()<CR>
 "
 let g:closetag_emptyTags_caseSensitive = 1
 " Shortcut for closing tags, default is '>'
@@ -151,7 +160,7 @@ imap ;im import  from '';<ESC>8hi
 imap ;cim import {  } from '';<ESC>10hi
 
 "Invoke CtrlP with starting directory
-nmap P :CtrlP 
+nmap <leader>p <C-p>
 " ignore git files, node_modules and bower_components
 " it will load faster this way
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
