@@ -1,6 +1,8 @@
+"file browsing
 Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
 Plugin 'vim-scripts/LustyExplorer'
+Plugin 'tpope/vim-vinegar'
 
 "colorschemes
 Plugin 'bf4/vim-dark_eyes'

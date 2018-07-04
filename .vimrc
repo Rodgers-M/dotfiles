@@ -172,7 +172,7 @@ let g:lightline = {
       \ 'colorscheme': 'wombat',
       \ }
 
-augroup myvimrc
+augroup autoSourceMyvimrc
     au!
     au BufWritePost .vimrc so ~/.vimrc
 augroup END
