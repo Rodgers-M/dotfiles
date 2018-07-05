@@ -3,6 +3,8 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
 Plugin 'vim-scripts/LustyExplorer'
 Plugin 'tpope/vim-vinegar'
+"add file icons
+Plugin 'ryanoasis/vim-devicons'
 
 "colorschemes
 Plugin 'bf4/vim-dark_eyes'
@@ -14,6 +16,8 @@ Plugin 'itchyny/lightline.vim'
 "auto completion
 Plugin 'ervandew/supertab'
 Plugin 'szw/vim-tags'
+"close and delete matching pairs
+Plugin 'jiangmiao/auto-pairs'
 "auto save files
 Plugin 'vim-scripts/vim-auto-save'
 
