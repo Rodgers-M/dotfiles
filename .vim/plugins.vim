@@ -34,6 +34,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'alvan/vim-closetag'
 Plugin 'wesQ3/vim-windowswap'
 Plugin 'SirVer/ultisnips'
+"linters
 Plugin 'w0rp/ale'
 Plugin 'gryf/pylint-vim'
 Plugin 'nvie/vim-flake8'

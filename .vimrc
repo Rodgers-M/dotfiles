@@ -1,3 +1,6 @@
+"Note to self
+"to see file-type icons on file names, install ITerm Nerd fonts
+"brew cask install font-hack-nerd-font
 syntax on
 
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -118,6 +121,7 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_javascript_eslint_exe = 'npm run lint --'
+let g:ale_linters = {'javascript': ['eslint']}
 let b:ale_fixers = ['prettier', 'eslint']
 let g:ale_emit_conflict_warnings = 0
 let g:syntastic_python_checkers = ['flake8']
