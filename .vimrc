@@ -32,7 +32,12 @@ let g:auto_save_in_insert_mode = 0  " do not save while in insert mode
 set backspace=eol,start,indent
 set wrap
 set textwidth=79
-set expandtab ts=4 sw=4 ai
+"default number of spaces for tabs
+set expandtab ts=2 sw=2 ai
+"number of spaces when edditing specific files 
+autocmd Filetype html setlocal ts=2 sw=2 expandtab
+autocmd Filetype python setlocal ts=4 sw=4 expandtab
+autocmd Filetype javascript setlocal ts=2 sw=2 expandtab
 "flag any whitespace in a python file
 
 "searching

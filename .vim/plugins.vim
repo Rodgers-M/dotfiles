@@ -23,6 +23,7 @@ Plugin 'vim-scripts/vim-auto-save'
 
 "plugins for js dev
 Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
 Plugin 'Galooshi/vim-import-js'
 Plugin 'ludovicchabant/vim-gutentags'
 Plugin 'kristijanhusak/vim-js-file-import'
