@@ -5,6 +5,8 @@ Plugin 'vim-scripts/LustyExplorer'
 Plugin 'tpope/vim-vinegar'
 "add file icons
 Plugin 'ryanoasis/vim-devicons'
+"plugin to comment and uncomment code
+Plugin 'scrooloose/nerdcommenter'
 
 "colorschemes
 Plugin 'bf4/vim-dark_eyes'

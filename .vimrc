@@ -101,14 +101,16 @@ vmap <leader>dq c""<ESC>hp
 vmap <leader>{ c{}<esc>hp
 vmap <leader>[ c[]<esc>hp
 vmap <leader>( c()<esc>hp
-"nerdtreeToogle shortcut
 
 "moving between windows/splits
 map <c-j> <c-w>j
 map <c-k> <c-w>k
 map <c-h> <c-w>h
 map <c-l> <c-w>l
+"nerdtreeToogle shortcut
 nmap <C-a> :NERDTreeToggle<CR>
+"add spaces after comment delimiters by default
+let g:NERDSpaceDelims = 1
 "resize splits 
 nmap <Left> :vertical resize -5<CR>
 nmap <Right> :vertical resize +5<CR>
