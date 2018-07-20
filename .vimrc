@@ -1,12 +1,19 @@
 "Note to self
 "to see file-type icons on file names, install ITerm Nerd fonts
+"brew tap caskroom/fonts
 "brew cask install font-hack-nerd-font
+"then change your ITerm2 Non-ASCII font to Hack Regular Nerd Font Complete 
 syntax on
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
+"silence  powerline error on python 3.7
+if has('python3')
+  silent! python3 1
+endif
+
 so  ~/dotfiles/.vim/plugins.vim
 
 call vundle#end()            " required
@@ -14,6 +21,9 @@ filetype plugin indent on    " required
 
 "show filename on status line
 set number
+set relativenumber
+" toggle ralative line numbers
+nmap <leader>rn :set relativenumber!<CR>
 set foldmethod=syntax
 "set this for fuzzy explorer
 set hidden
@@ -109,30 +119,18 @@ map <c-h> <c-w>h
 map <c-l> <c-w>l
 "nerdtreeToogle shortcut
 nmap <C-a> :NERDTreeToggle<CR>
-"add spaces after comment delimiters by default
+"when you delete or rename a file, always delete its associated buffer
+let NERDTreeAutoDeleteBuffer=1
+
+"add spaces after comment delimiters by default 'Nerd commenter'
 let g:NERDSpaceDelims = 1
 "resize splits 
 nmap <Left> :vertical resize -5<CR>
 nmap <Right> :vertical resize +5<CR>
 
-"configurations for syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set ruler
-set statusline+=%*
-set statusline=2
-set statusline=%f
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_javascript_checkers = ['eslint']
-let g:syntastic_javascript_eslint_exe = 'npm run lint --'
 let g:ale_linters = {'javascript': ['eslint']}
 let b:ale_fixers = ['prettier', 'eslint']
 let g:ale_emit_conflict_warnings = 0
-let g:syntastic_python_checkers = ['flake8']
-nmap <leader>st :SyntasticToggleMode<CR>
 
 "cnfigurations for closetag plugin
 "enable autoclose in the following file types
