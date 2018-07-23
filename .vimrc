@@ -19,11 +19,20 @@ so  ~/dotfiles/.vim/plugins.vim
 call vundle#end()            " required
 filetype plugin indent on    " required
 
+let mapleader=',' "make comma the mapleader
 "show filename on status line
-set number
-set relativenumber
+set number relativenumber
 " toggle ralative line numbers
 nmap <leader>rn :set relativenumber!<CR>
+nmap <leader>tn :set relativenumber!<CR>
+"automatically toggle relative numbers on different situeations
+"when in insert mode or buffer loses focus, turn off relative number
+augroup numbertoggle
+  autocmd!
+  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+augroup END
+
 set foldmethod=syntax
 "set this for fuzzy explorer
 set hidden
@@ -58,7 +67,6 @@ set ignorecase
 set smartcase
 nnoremap <F5> :grep <C-R><C-W> *<CR>
 "a shortcut to edit vimrc file"
-let mapleader=',' "make comma the mapleader
 map <leader>ev :e ~/.vimrc<CR>
 map <leader>pv :e ~/dotfiles/.vim/plugins.vim<CR>
 map <leader>sv :so ~/.vimrc<CR>
