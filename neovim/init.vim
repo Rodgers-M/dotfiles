@@ -157,6 +157,7 @@ nnoremap <F6> :call SortJsFileImport()<CR>
 "mappings for tern vim
 nmap <leader>df :TernDef
 nmap <leader>ref :TernRefs
+nmap <leader>ren :TernRename
 "
 let g:closetag_emptyTags_caseSensitive = 1
 " Shortcut for closing tags, default is '>'
