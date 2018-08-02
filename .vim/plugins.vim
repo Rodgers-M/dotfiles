@@ -22,21 +22,23 @@ Plugin 'ervandew/supertab'
 Plugin 'jiangmiao/auto-pairs'
 "auto save files
 Plugin 'vim-scripts/vim-auto-save'
+"tab completions
+Plugin 'ajh17/VimCompletesMe'
+"Plugin 'Valloric/YouCompleteMe'
 
 "plugins for js dev
-Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 Plugin 'Galooshi/vim-import-js'
+Plugin 'epilande/vim-react-snippets'
 "Plugin 'ludovicchabant/vim-gutentags'
 Plugin 'kristijanhusak/vim-js-file-import'
-Plugin 'epilande/vim-react-snippets'
 Plugin 'isRuslan/vim-es6'
 Plugin 'ternjs/tern_for_vim'
 
 Plugin 'tpope/vim-surround'
 Plugin 'alvan/vim-closetag'
 Plugin 'wesQ3/vim-windowswap'
-Plugin 'SirVer/ultisnips'
+"Plugin 'SirVer/ultisnips'
 "linters
 Plugin 'w0rp/ale'
 "Plugin 'gryf/pylint-vim'

@@ -25,6 +25,7 @@ set number relativenumber
 " toggle ralative line numbers
 nmap <leader>rn :set relativenumber!<CR>
 nmap <leader>tn :set relativenumber!<CR>
+nmap <leader>a :q<CR>
 "automatically toggle relative numbers on different situeations
 "when in insert mode or buffer loses focus, turn off relative number
 augroup numbertoggle
@@ -155,9 +156,11 @@ let g:closetag_emptyTags_caseSensitive = 1
 " Shortcut for closing tags, default is '>'
 "
 " Trigger configuration (Optional)
-let g:UltiSnipsExpandTrigger="<C-l>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltiSnipsExpandTrigger='<C-l>'
+let g:UltiSnipsJumpForwardTrigger='<c-b>'
+let g:UltiSnipsJumpBackwardTrigger='<c-z>'
+
+let g:deoplete#enable_at_startup = 1
 
 imap ;d <div className=''><ESC>li
 imap ;p <p>
