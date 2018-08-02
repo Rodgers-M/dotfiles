@@ -149,9 +149,14 @@ let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.js,*.jsx'
 let g:closetag_xhtml_filenames = '*.xhtml,*.js,*.jsx'
 " integer value [0|1]
 " This will make the list of non-closing tags case-sensitive (e.g. `<Link>` will be closed while `<link>` won't.)
+
+"javascript mappings
 " mappings for vim-js-import
 nnoremap <F5> :call JsFileImport()<CR>
 nnoremap <F6> :call SortJsFileImport()<CR>
+"mappings for tern vim
+nmap <leader>df :TernDef
+nmap <leader>ref :TernRefs
 "
 let g:closetag_emptyTags_caseSensitive = 1
 " Shortcut for closing tags, default is '>'
