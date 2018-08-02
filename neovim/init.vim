@@ -38,12 +38,13 @@ set hidden
 "colorscheme atom-dark-256  "gruvbox   
 set background=dark 
 colorscheme gruvbox  
-let g:gruvbox_contrast_dark='hard'
 set cursorline
 set scrolloff=3
 set autochdir
 "specify buffers for autocomplete
 set complete=.,w,b,u
+" start autocomplete suggestion after typing 2 characters
+let g:deoplete#auto_completion_start_length = 2
 "settings for auto saving files
 let g:auto_save = 1  " enable AutoSave on Vim startup
 let g:auto_save_no_updatetime = 1  " do not change the 'updatetime' option
