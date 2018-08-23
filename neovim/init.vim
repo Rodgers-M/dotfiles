@@ -84,6 +84,7 @@ nmap <space> i<space><ESC>
 nmap <leader>w :w<cr>
 
 "disabling and remapping the arrow keys
+"move a line up/down on normal mode
 noremap <Up> :m .-2<CR>==
 noremap <Down> :m .+1<CR>==
 "noremap <Left> <NOP>
@@ -91,8 +92,8 @@ noremap <Down> :m .+1<CR>==
 "do nothing in insert mode
 "imap <Up> <NOP>
 "imap <Down> <NOP>
-imap <Left> <NOP>
-imap <Right> <NOP>
+"imap <Left> <NOP>
+"imap <Right> <NOP>
 "move selected lines up/down in visual mode
 vmap <Up> :m '<-2<CR>gv=gv
 vmap <Down> :m '>+1<CR>gv=gv
@@ -106,7 +107,12 @@ imap <leader>( ()<ESC>i
 imap <leader>< <><ESC>i
 imap jj <ESC>
 imap kk <ESC>
+"terminal mode mappings
+"map Esc to switch back to normal mode
+tnoremap <ESC> <C-\><C-n>
+tmap <C-c> <C-w>c
 
+" Plugins mappings
 "vim-sorround mappings
 nmap <leader>mm) ysiw)
 nmap <leader>mm] ysiw]
@@ -128,11 +134,14 @@ map <c-h> <c-w>h
 map <c-l> <c-w>l
 "nerdtreeToogle shortcut
 nmap <C-a> :NERDTreeToggle<CR>
+"refresh node to currently open file
+map <leader>r :NERDTreeFind<cr>
 "when you delete or rename a file, always delete its associated buffer
 let NERDTreeAutoDeleteBuffer=1
 
 "add spaces after comment delimiters by default 'Nerd commenter'
 let g:NERDSpaceDelims = 1
+let g:NERDCommentEmptyLines = 1
 "resize splits 
 nmap <Left> :vertical resize -5<CR>
 nmap <Right> :vertical resize +5<CR>
@@ -191,6 +200,10 @@ nmap <leader>p <C-p>
 " it will load faster this way
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 let g:ctrlp_custom_ignore = 'node_modules\|bower_compnents\|DS_Store\|git'
+
+set wildignore+=*.pyc,*.swp,*.DS_Store,*tags*,
+"Nerdtree config for wildignore
+let NERDTreeRespectWildIgnore=1
 
 "lightline colorscheme
 set noshowmode
