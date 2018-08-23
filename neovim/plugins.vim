@@ -34,12 +34,11 @@ Plug 'honza/vim-snippets'
 Plug 'mxw/vim-jsx'
 Plug 'Galooshi/vim-import-js'
 Plug 'epilande/vim-react-snippets'
-Plug 'Shougo/deoplete.nvim'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins'  }
 "Plug 'ludovicchabant/vim-gutentags'
 Plug 'kristijanhusak/vim-js-file-import'
 Plug 'isRuslan/vim-es6'
 Plug 'ternjs/tern_for_vim'
-
 Plug 'tpope/vim-surround'
 Plug 'alvan/vim-closetag'
 Plug 'wesQ3/vim-windowswap'
@@ -51,3 +50,6 @@ Plug 'w0rp/ale'
 "
 "version control
 Plug 'airblade/vim-gitgutter'
+
+"manages tags files in vim
+Plug 'ludovicchabant/vim-gutentags'
