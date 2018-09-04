@@ -176,6 +176,9 @@ let g:UltiSnipsJumpForwardTrigger='<c-b>'
 let g:UltiSnipsJumpBackwardTrigger='<c-z>'
 
 let g:deoplete#enable_at_startup = 1
+let g:deoplete#auto_completion_start_length = 3
+"make the enter key select the suggested popup
+inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
 imap ;d <div className=''><ESC>li
 imap ;p <p>
