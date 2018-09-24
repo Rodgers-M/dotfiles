@@ -123,7 +123,7 @@ nmap <leader>dq bcw""<ESC>hp
 vmap <leader>qw c''<ESC>hp
 vmap <leader>dq c""<ESC>hp
 "sorround selected text in brackets, parenthesis, e.t.c
-vmap <leader>{ c{}<esc>hp
+vmap <leader>{ c{ }<esc>hpl<space>bhx
 vmap <leader>[ c[]<esc>hp
 vmap <leader>( c()<esc>hp
 
@@ -145,7 +145,8 @@ let g:NERDCommentEmptyLines = 1
 "resize splits 
 nmap <Left> :vertical resize -5<CR>
 nmap <Right> :vertical resize +5<CR>
-
+"open vertical splits to the right 
+set splitright
 let g:ale_linters = {'javascript': ['eslint']}
 let b:ale_fixers = ['prettier', 'eslint']
 let g:ale_emit_conflict_warnings = 0
@@ -169,6 +170,10 @@ nmap <leader>ren :TernRename
 "
 let g:closetag_emptyTags_caseSensitive = 1
 " Shortcut for closing tags, default is '>'
+
+"gutentags settings
+"when opening a file in a project that has no tags file, let Gutentags auto-generate that tags file.
+let g:gutentags_generate_on_missing = 1
 "
 " Trigger configuration (Optional)
 let g:UltiSnipsExpandTrigger='<c-l>'

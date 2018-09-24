@@ -35,13 +35,13 @@ Plug 'mxw/vim-jsx'
 Plug 'Galooshi/vim-import-js'
 Plug 'epilande/vim-react-snippets'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins'  }
-"Plug 'ludovicchabant/vim-gutentags'
 Plug 'kristijanhusak/vim-js-file-import'
 Plug 'isRuslan/vim-es6'
 Plug 'ternjs/tern_for_vim'
 Plug 'tpope/vim-surround'
 Plug 'alvan/vim-closetag'
 Plug 'wesQ3/vim-windowswap'
+"Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 "Plug 'SirVer/ultisnips'
 "linters
 Plug 'w0rp/ale'
