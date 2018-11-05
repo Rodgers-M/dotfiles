@@ -138,6 +138,8 @@ nmap <C-a> :NERDTreeToggle<CR>
 map <leader>r :NERDTreeFind<cr>
 "when you delete or rename a file, always delete its associated buffer
 let NERDTreeAutoDeleteBuffer=1
+"mru mapping
+nmap <leader>rf :MRU<CR>
 
 "add spaces after comment delimiters by default 'Nerd commenter'
 let g:NERDSpaceDelims = 1
@@ -208,6 +210,8 @@ nmap <leader>p <C-p>
 " it will load faster this way
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 let g:ctrlp_custom_ignore = 'node_modules\|bower_compnents\|DS_Store\|git'
+"make Gdiff always open vertical splits
+set diffopt+=vertical
 
 set wildignore+=*.pyc,*.swp,*.DS_Store,*tags*,
 "Nerdtree config for wildignore
