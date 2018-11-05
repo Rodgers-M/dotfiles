@@ -1,12 +1,14 @@
 "file browsing
 Plug 'scrooloose/nerdtree'
 Plug 'kien/ctrlp.vim'
+Plug 'yegappan/mru' "show a list of most recently used files
 "Plug 'vim-scripts/LustyExplorer'
 Plug 'tpope/vim-vinegar'
 "add file icons
 Plug 'ryanoasis/vim-devicons'
 "Plugin to comment and uncomment code
 Plug 'scrooloose/nerdcommenter'
+Plug 'tomtom/tcomment_vim'
 
 "colorschemes
 "Plug 'bf4/vim-dark_eyes'
@@ -50,6 +52,7 @@ Plug 'w0rp/ale'
 "
 "version control
 Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
 
 "manages tags files in vim
 Plug 'ludovicchabant/vim-gutentags'
