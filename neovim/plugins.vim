@@ -31,6 +31,8 @@ Plug 'ajh17/VimCompletesMe'
 "snippets and autocomplete
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
+"a plugin to configure vim in accordance to local .editorconfig file
+Plug 'editorconfig/editorconfig-vim'
 
 "Plugins for js dev
 Plug 'mxw/vim-jsx'
@@ -43,6 +45,7 @@ Plug 'ternjs/tern_for_vim'
 Plug 'tpope/vim-surround'
 Plug 'alvan/vim-closetag'
 Plug 'wesQ3/vim-windowswap'
+Plug 'moll/vim-node'
 "Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 "Plug 'SirVer/ultisnips'
 "linters

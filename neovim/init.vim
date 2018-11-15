@@ -66,7 +66,9 @@ set incsearch
 set showmatch
 set ignorecase
 set smartcase
-nnoremap <F5> :grep <C-R><C-W> *<CR>
+noremap <F5> :grep <C-R><C-W> *<CR>
+"search the word under the cursor in all files in current directory
+map <F9> :execute "vimgrep /" . expand("<cword>") . "/j **" <Bar> cw<CR>
 "a shortcut to edit vimrc file"
 map <leader>ev :e ~/.config/nvim/init.vim<CR>
 map <leader>pv :e ~/.config/nvim//plugins.vim<CR>
@@ -116,13 +118,13 @@ tmap <C-c> <C-w>c
 "vim-sorround mappings
 nmap <leader>mm) ysiw)
 nmap <leader>mm] ysiw]
-nmap <leader>mm} ysiw}
+nmap <leader>mm} ysiw}w<space>lw<space>e
 "custom sorround mappings
 nmap <leader>qw bcw''<ESC>hp
 nmap <leader>dq bcw""<ESC>hp
 vmap <leader>qw c''<ESC>hp
 vmap <leader>dq c""<ESC>hp
-"sorround selected text in brackets, parenthesis, e.t.c
+"sorround selected text in { brackets }, parenthesis, e.t.c
 vmap <leader>{ c{ }<esc>hpl<space>bhx
 vmap <leader>[ c[]<esc>hp
 vmap <leader>( c()<esc>hp
@@ -132,6 +134,7 @@ map <c-j> <c-w>j
 map <c-k> <c-w>k
 map <c-h> <c-w>h
 map <c-l> <c-w>l
+map <C-f> <C-w>f
 "nerdtreeToogle shortcut
 nmap <C-a> :NERDTreeToggle<CR>
 "refresh node to currently open file
@@ -169,6 +172,14 @@ nnoremap <F6> :call SortJsFileImport()<CR>
 nmap <leader>df :TernDef
 nmap <leader>ref :TernRefs
 nmap <leader>ren :TernRename
+"vim-node mappings
+autocmd User Node if &filetype == "javascript" | setlocal expandtab | endif
+"use <C-w>f to open the file under the cursor in a new vertical split
+autocmd User Node
+  \ if &filetype == "javascript" |
+  \   nmap <buffer> <C-w>f <Plug>NodeVSplitGotoFile |
+  \   nmap <buffer> <C-w><C-f> <Plug>NodeVSplitGotoFile |
+  \ endif
 "
 let g:closetag_emptyTags_caseSensitive = 1
 " Shortcut for closing tags, default is '>'
@@ -176,6 +187,8 @@ let g:closetag_emptyTags_caseSensitive = 1
 "gutentags settings
 "when opening a file in a project that has no tags file, let Gutentags auto-generate that tags file.
 let g:gutentags_generate_on_missing = 1
+let g:gutentags_generate_on_new = 1
+let g:gutentags_generate_on_write = 1
 "
 " Trigger configuration (Optional)
 let g:UltiSnipsExpandTrigger='<c-l>'
