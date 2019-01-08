@@ -21,7 +21,7 @@ location
 and same applies for the plugins.vim and any other file you might want to
 symlink
 
-`/path-to-cloned-repo/dotfiles/neovim/plugins.vim  /Users/username/.config/nvim/plugins.vim`
+`ln -s /path-to-cloned-repo/dotfiles/neovim/plugins.vim  /Users/username/.config/nvim/plugins.vim`
 
 this should be good to get you started
 
