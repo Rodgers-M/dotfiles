@@ -58,6 +58,7 @@ set expandtab ts=2 sw=2 ai
 autocmd Filetype html setlocal ts=2 sw=2 expandtab
 autocmd Filetype python setlocal ts=4 sw=4 expandtab
 autocmd Filetype javascript setlocal ts=2 sw=2 expandtab
+autocmd Filetype typescript setlocal ts=2 sw=2 expandtab
 "flag any whitespace in a python file
 
 "searching

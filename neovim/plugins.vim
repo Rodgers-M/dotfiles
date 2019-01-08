@@ -48,6 +48,10 @@ Plug 'wesQ3/vim-windowswap'
 Plug 'moll/vim-node'
 "Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 "Plug 'SirVer/ultisnips'
+
+"Plugins for typescript development
+Plug 'leafgarland/typescript-vim'
+Plug 'Quramy/tsuquyomi'
 "linters
 Plug 'w0rp/ale'
 "Plug 'gryf/pylint-vim'
