@@ -13,15 +13,15 @@ location
 
 ## example command on osx
 # neovim
-`ln -s /location-to-cloned-repo/dotfiles/neovim/init.vim  /Users/username/.config/nvim/init.vim`
+`ln -s /path-to-cloned-repo/dotfiles/neovim/init.vim  /Users/username/.config/nvim/init.vim`
 
 # vim 
-`ln -s /location-to-cloned-repo/dotfiles/.vimrc /Users/username/.vimrc`
+`ln -s /path-to-cloned-repo/dotfiles/.vimrc /Users/username/.vimrc`
 
 and same applies for the plugins.vim and any other file you might want to
 symlink
 
-`/location-to-cloned-repo/dotfiles/neovim/plugins.vim  /Users/username/.config/nvim/plugins.vim`
+`/path-to-cloned-repo/dotfiles/neovim/plugins.vim  /Users/username/.config/nvim/plugins.vim`
 
 this should be good to get you started
 
