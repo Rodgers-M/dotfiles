@@ -41,7 +41,8 @@ Plug 'epilande/vim-react-snippets'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins'  }
 Plug 'kristijanhusak/vim-js-file-import'
 Plug 'isRuslan/vim-es6'
-Plug 'ternjs/tern_for_vim'
+Plug 'ternjs/tern_for_vim', { 'do': 'npm install && npm install -g tern' }
+Plug 'ternjs/tern_for_vim', { 'do': 'npm install && npm install -g tern' }
 Plug 'tpope/vim-surround'
 Plug 'alvan/vim-closetag'
 Plug 'wesQ3/vim-windowswap'
@@ -52,6 +53,9 @@ Plug 'moll/vim-node'
 "Plugins for typescript development
 Plug 'leafgarland/typescript-vim'
 Plug 'Quramy/tsuquyomi'
+Plug 'Shougo/vimproc.vim', {'do' : 'make'}
+Plug 'HerringtonDarkholme/yats.vim'
+Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
 "linters
 Plug 'w0rp/ale'
 "Plug 'gryf/pylint-vim'
