@@ -66,3 +66,8 @@ Plug 'tpope/vim-fugitive'
 
 "manages tags files in vim
 Plug 'ludovicchabant/vim-gutentags'
+Plug 'skywind3000/gutentags_plus'
+
+"searching in vim
+"plug 'mileszs/ack.vim'
+Plug 'gabesoft/vim-ags' "docs => https://github.com/epmatsw/ag.vim/blob/master/README.md

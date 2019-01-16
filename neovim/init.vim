@@ -190,6 +190,12 @@ let g:closetag_emptyTags_caseSensitive = 1
 let g:gutentags_generate_on_missing = 1
 let g:gutentags_generate_on_new = 1
 let g:gutentags_generate_on_write = 1
+" enable gtags module
+let g:gutentags_modules = ['ctags', 'gtags_cscope']
+" config project root markers.
+let g:gutentags_project_root = ['.root']
+" generate datebases in my cache directory, prevent gtags files polluting my project
+let g:gutentags_cache_dir = expand('~/.cache/tags')
 "
 " Trigger configuration (Optional)
 let g:UltiSnipsExpandTrigger='<c-l>'
@@ -240,6 +246,8 @@ set diffopt+=vertical
 set wildignore+=*.pyc,*.swp,*.DS_Store,*tags*,
 "Nerdtree config for wildignore
 let NERDTreeRespectWildIgnore=1
+"searching
+let g:ags_agexe = 'ag'
 
 "lightline colorscheme
 set noshowmode
