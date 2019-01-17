@@ -1,4 +1,4 @@
-"Note to self
+""""Note to self
 "to see file-type icons on file names, install ITerm Nerd fonts
 "brew tap caskroom/fonts
 "brew cask install font-hack-nerd-font
@@ -25,7 +25,7 @@ nmap <leader>rn :set relativenumber!<CR>
 nmap <leader>tn :set relativenumber!<CR>
 nmap <leader>a :q<CR>
 "automatically toggle relative numbers on different situeations
-"when in insert mode or buffer loses focus, turn off relative number
+""when in insert mode or buffer loses focus, turn off relative number
 augroup numbertoggle
   autocmd!
   autocmd BufEnter,FocusGained,InsertLeave * set relativenumber

@@ -1,11 +1,14 @@
-"file browsing
+"file browsing and searching"
 Plug 'scrooloose/nerdtree'
 Plug 'kien/ctrlp.vim'
 Plug 'yegappan/mru' "show a list of most recently used files
+"Fuzzy finder
+Plug '/usr/local/opt/fzf' "install fzf with brew for this to work
+Plug 'junegunn/fzf.vim' 
 "Plug 'vim-scripts/LustyExplorer'
 Plug 'tpope/vim-vinegar'
 "add file icons
-Plug 'ryanoasis/vim-devicons'
+"Plug 'ryanoasis/vim-devicons'
 "Plugin to comment and uncomment code
 Plug 'scrooloose/nerdcommenter'
 Plug 'tomtom/tcomment_vim'
