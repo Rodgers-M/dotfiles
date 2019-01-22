@@ -116,19 +116,19 @@ tnoremap <ESC> <C-\><C-n>
 tmap <C-c> <C-w>c
 
 " Plugins mappings
-"vim-sorround mappings
-nmap <leader>mm) ysiw)
-nmap <leader>mm] ysiw]
-nmap <leader>mm} ysiw}w<space>lw<space>e
+"vim-sorround 'mappings'
+noremap <leader>mm) ysiw)
+noremap <leader>mm] ysiw]
+noremap <leader>mm} ysiw}w<space>lw<space>e
 "custom sorround mappings
-nmap <leader>qw bcw''<ESC>hp
-nmap <leader>dq bcw""<ESC>hp
-vmap <leader>qw c''<ESC>hp
-vmap <leader>dq c""<ESC>hp
-"sorround selected text in { brackets }, parenthesis, e.t.c
-vmap <leader>{ c{ }<esc>hpl<space>bhx
-vmap <leader>[ c[]<esc>hp
-vmap <leader>( c()<esc>hp
+noremap <leader>qw bcw''<ESC>hp
+noremap <leader>dq bcw""<ESC>hp
+vnoremap <leader>qw c''<ESC>hp
+vnoremap <leader>dq c""<ESC>hp
+"sorround selected text in  brackets, parenthesis, e.t.c
+vnoremap <leader>{ c{ }<esc>hpl<space>bhx
+vnoremap <leader>[ c[]<esc>hp
+vnoremap <leader>( c()<esc>hp
 
 "moving between windows/splits
 map <c-j> <c-w>j
@@ -142,7 +142,7 @@ nmap <C-a> :NERDTreeToggle<CR>
 map <leader>r :NERDTreeFind<cr>
 "when you delete or rename a file, always delete its associated buffer
 let NERDTreeAutoDeleteBuffer=1
-"mru mapping
+"mru mapping | most recently used files
 nmap <leader>rf :MRU<CR>
 
 "add spaces after comment delimiters by default 'Nerd commenter'
