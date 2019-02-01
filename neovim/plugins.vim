@@ -2,6 +2,8 @@
 Plug 'scrooloose/nerdtree'
 Plug 'kien/ctrlp.vim'
 Plug 'yegappan/mru' "show a list of most recently used files
+"docs => https://github.com/epmatsw/ag.vim/blob/master/README.md
+Plug 'rking/ag.vim' "install Ag on your machine: https://github.com/ggreer/the_silver_searcher
 "Fuzzy finder
 Plug '/usr/local/opt/fzf' "install fzf with brew for this to work
 Plug 'junegunn/fzf.vim' 
@@ -71,6 +73,3 @@ Plug 'tpope/vim-fugitive'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'skywind3000/gutentags_plus'
 
-"searching in vim
-"plug 'mileszs/ack.vim'
-Plug 'gabesoft/vim-ags' "docs => https://github.com/epmatsw/ag.vim/blob/master/README.md
