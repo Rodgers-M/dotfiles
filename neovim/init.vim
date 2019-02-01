@@ -19,6 +19,7 @@ call plug#end()            " required
 "filetype plugin indent on    " required
 let mapleader=',' "make comma the mapleader
 "show filename on status line
+set statusline=%t 
 set number relativenumber
 " toggle ralative line numbers
 nmap <leader>rn :set relativenumber!<CR>
@@ -214,6 +215,7 @@ let g:tern_request_timeout = 1
 let g:tern_request_timeout = 6000
 let g:tern#command = ["tern"]
 let g:tern#arguments = [" — persistent"]
+let g:deoplete#max_list = 20
 "make the enter key select the suggested popup
 inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
