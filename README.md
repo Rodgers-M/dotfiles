@@ -26,7 +26,8 @@ symlink
 this should be good to get you started
 
 # Useful links
-[troubleshoot/debug key bindings/mappings](https://vi.stackexchange.com/questions/7722/how-to-debug-a-mapping) : sometimes mappings my not work as expected
+[troubleshoot/debug key bindings/mappings](https://vi.stackexchange.com/questions/7722/how-to-debug-a-mapping) : sometimes mappings my not work as expected.
+do `:help map-which-keys ` for vim's suggestions on what keys to map.
 
 
 
