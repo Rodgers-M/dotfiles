@@ -52,6 +52,7 @@ let g:auto_save_in_insert_mode = 0  " do not save while in insert mode
 "white space
 set backspace=eol,start,indent
 set wrap
+set linebreak
 set textwidth=79
 "default number of spaces for tabs
 set expandtab ts=2 sw=2 ai
