@@ -66,6 +66,10 @@ autocmd Filetype typescript setlocal ts=2 sw=2 expandtab
 "searching
 set hlsearch
 set incsearch
+let g:ags_agexe = 'ag'
+set inccommand=nosplit
+
+"live substitution"
 set showmatch
 set ignorecase
 set smartcase
@@ -249,8 +253,6 @@ set diffopt+=vertical
 set wildignore+=*.pyc,*.swp,*.DS_Store,*tags*,
 "Nerdtree config for wildignore
 let NERDTreeRespectWildIgnore=1
-"searching
-let g:ags_agexe = 'ag'
 
 "lightline colorscheme
 set noshowmode

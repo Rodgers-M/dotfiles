@@ -14,6 +14,8 @@ Plug 'ryanoasis/vim-devicons'
 "Plugin to comment and uncomment code
 Plug 'scrooloose/nerdcommenter'
 Plug 'tomtom/tcomment_vim'
+"highlight yanked text"
+Plug 'machakann/vim-highlightedyank'
 
 "colorschemes
 "Plug 'bf4/vim-dark_eyes'
