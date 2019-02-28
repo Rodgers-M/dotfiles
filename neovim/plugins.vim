@@ -70,6 +70,8 @@ Plug 'w0rp/ale'
 "version control
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
+"show git status flags on files"
+Plug 'Xuyuanp/nerdtree-git-plugin'
 
 "manages tags files in vim
 Plug 'ludovicchabant/vim-gutentags'

@@ -16,6 +16,18 @@ Plug 'scrooloose/nerdtree', {'on': 'nerdtreetoggle'}
 so  ~/.config/nvim//plugins.vim
 
 call plug#end()            " required
+let g:NERDTreeIndicatorMapCustom = {
+    \ "Modified"  : "✹",
+    \ "Staged"    : "✚",
+    \ "Untracked" : "✭",
+    \ "Renamed"   : "➜",
+    \ "Unmerged"  : "═",
+    \ "Deleted"   : "✖",
+    \ "Dirty"     : "✗",
+    \ "Clean"     : "✔︎",
+    \ 'Ignored'   : '☒',
+    \ "Unknown"   : "?"
+    \ }
 "filetype plugin indent on    " required
 let mapleader=',' "make comma the mapleader
 "show filename on status line
@@ -67,9 +79,9 @@ autocmd Filetype typescript setlocal ts=2 sw=2 expandtab
 set hlsearch
 set incsearch
 let g:ags_agexe = 'ag'
+"live substitution"
 set inccommand=nosplit
 
-"live substitution"
 set showmatch
 set ignorecase
 set smartcase
