@@ -4,6 +4,7 @@ Plug 'kien/ctrlp.vim'
 Plug 'yegappan/mru' "show a list of most recently used files
 "docs => https://github.com/epmatsw/ag.vim/blob/master/README.md
 Plug 'rking/ag.vim' "install Ag on your machine: https://github.com/ggreer/the_silver_searcher
+Plug 'eugen0329/vim-esearch'
 "Fuzzy finder
 Plug '/usr/local/opt/fzf' "install fzf with brew for this to work
 Plug 'junegunn/fzf.vim' 
@@ -48,7 +49,6 @@ Plug 'epilande/vim-react-snippets'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins'  }
 Plug 'kristijanhusak/vim-js-file-import'
 Plug 'isRuslan/vim-es6'
-Plug 'ternjs/tern_for_vim', { 'do': 'npm install && npm install -g tern' }
 Plug 'ternjs/tern_for_vim', { 'do': 'npm install && npm install -g tern' }
 Plug 'tpope/vim-surround'
 Plug 'alvan/vim-closetag'

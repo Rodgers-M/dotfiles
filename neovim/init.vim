@@ -156,10 +156,14 @@ map <c-l> <c-w>l
 map <C-f> <C-w>f
 "nerdtreeToogle shortcut
 nmap <C-a> :NERDTreeToggle<CR>
-"refresh node to currently open file
+"go to the location of the currently open file
 map <leader>r :NERDTreeFind<cr>
+"refresh Nerdtree to show newly added files
+map <leader>rh :NERDTreeFocus<cr>R<c-w><c-p>
 "when you delete or rename a file, always delete its associated buffer
 let NERDTreeAutoDeleteBuffer=1
+let NERDTreeMinimalUI = 1
+let NERDTreeDirArrows = 1
 "mru mapping | most recently used files
 nmap <leader>rf :MRU<CR>
 
@@ -174,6 +178,7 @@ set splitright
 let g:ale_linters = {'javascript': ['eslint']}
 let b:ale_fixers = ['prettier', 'eslint']
 let g:ale_emit_conflict_warnings = 0
+let g:alet_completion = 1
 
 "cnfigurations for closetag plugin
 "enable autoclose in the following file types
