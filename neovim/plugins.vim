@@ -30,6 +30,7 @@ Plug 'ervandew/supertab'
 "Plug 'szw/vim-tags'
 "close and delete matching pairs
 Plug 'jiangmiao/auto-pairs'
+Plug 'https://github.com/adelarsq/vim-matchit'
 "auto save files
 Plug 'vim-scripts/vim-auto-save'
 "tab completions
@@ -56,6 +57,9 @@ Plug 'wesQ3/vim-windowswap'
 Plug 'moll/vim-node'
 "Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 "Plug 'SirVer/ultisnips'
+"
+"Html plugins
+Plug 'mattn/emmet-vim'
 
 "Plugins for typescript development
 Plug 'leafgarland/typescript-vim'
@@ -66,6 +70,9 @@ Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
 Plug 'w0rp/ale'
 "Plug 'gryf/pylint-vim'
 "Plug 'nvie/vim-flake8'
+"
+"plugins for c# development
+"Plug 'OmniSharp/omnisharp-vim'
 "
 "version control
 Plug 'airblade/vim-gitgutter'

@@ -27,6 +27,7 @@ this should be good to get you started
 
 # Useful links
 [troubleshoot/debug key bindings/mappings](https://vi.stackexchange.com/questions/7722/how-to-debug-a-mapping) : sometimes mappings my not work as expected.
+[video showing how to use emmet for html snippets](https://youtu.be/Sc30cyEH5oo?t=405)
 do `:help map-which-keys ` for vim's suggestions on what keys to map.
 
 

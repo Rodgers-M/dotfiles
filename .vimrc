@@ -138,7 +138,7 @@ let g:NERDSpaceDelims = 1
 nmap <Left> :vertical resize -5<CR>
 nmap <Right> :vertical resize +5<CR>
 
-let g:ale_linters = {'javascript': ['eslint']}
+let g:ale_linters = {'javascript': ['eslint'], 'cs': ['OmniSharp']}
 let b:ale_fixers = ['prettier', 'eslint']
 let g:ale_emit_conflict_warnings = 0
 
