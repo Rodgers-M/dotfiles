@@ -144,7 +144,7 @@ noremap <leader>dq bcw""<ESC>hp
 vnoremap <leader>qw c''<ESC>hp
 vnoremap <leader>dq c""<ESC>hp
 "sorround selected text in  brackets, parenthesis, e.t.c
-vnoremap <leader>{ c{ }<esc>hpl<space>bhx
+vnoremap <leader>{ c{ }<esc>hpli<space><esc>2l
 vnoremap <leader>[ c[]<esc>hp
 vnoremap <leader>( c()<esc>hp
 
@@ -241,7 +241,7 @@ let g:deoplete#max_list = 20
 "make the enter key select the suggested popup
 inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
-imap ;d <div className=''><ESC>li
+imap ;d <div>
 imap ;p <p>
 imap ;a <a href=''><ESc>hi
 imap ;ul <ul><esc>li
