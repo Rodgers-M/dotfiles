@@ -100,6 +100,8 @@ nmap <leader>nl o<ESC>
 nmap <leader>nL O<ESC>
 "nmap <leader>q :q<cr>
 nmap <space> i<space><ESC>
+"console log shortcut"
+imap <leader>clg console.log(
 
 "fast saving of a buffer
 nmap <leader>w :w<cr>
