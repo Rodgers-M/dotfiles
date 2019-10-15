@@ -18,6 +18,12 @@ Plug 'tomtom/tcomment_vim'
 "highlight yanked text"
 Plug 'machakann/vim-highlightedyank'
 
+"windows management
+Plug 'wesQ3/vim-windowswap'
+
+" handling undo and redo 
+"Plug 'sjl/gundo.vim'
+
 "colorschemes
 "Plug 'bf4/vim-dark_eyes'
 Plug 'HenryNewcomer/vim-theme-papaya'
@@ -25,9 +31,11 @@ Plug 'morhetz/gruvbox'
 "status line
 Plug 'itchyny/lightline.vim'
 
+"intellisense engine
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
 "auto completion
 Plug 'ervandew/supertab'
-"Plug 'szw/vim-tags'
 "close and delete matching pairs
 Plug 'jiangmiao/auto-pairs'
 Plug 'https://github.com/adelarsq/vim-matchit'
@@ -35,7 +43,7 @@ Plug 'https://github.com/adelarsq/vim-matchit'
 Plug 'vim-scripts/vim-auto-save'
 "tab completions
 Plug 'ajh17/VimCompletesMe'
-"Plug 'Valloric/YouCompleteMe'
+"
 
 "snippets and autocomplete
 Plug 'SirVer/ultisnips'
@@ -43,44 +51,25 @@ Plug 'honza/vim-snippets'
 "a plugin to configure vim in accordance to local .editorconfig file
 Plug 'editorconfig/editorconfig-vim'
 
-"Plugins for js dev
+"Plugins for typescript/javascript development
 Plug 'mxw/vim-jsx'
-Plug 'Galooshi/vim-import-js'
-Plug 'epilande/vim-react-snippets'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins'  }
-Plug 'kristijanhusak/vim-js-file-import'
 Plug 'isRuslan/vim-es6'
-Plug 'ternjs/tern_for_vim', { 'do': 'npm install && npm install -g tern' }
 Plug 'tpope/vim-surround'
 Plug 'alvan/vim-closetag'
-Plug 'wesQ3/vim-windowswap'
 Plug 'moll/vim-node'
-"Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
-"Plug 'SirVer/ultisnips'
-"
+"intellisense
+Plug 'leafgarland/typescript-vim'
+
 "Html plugins
 Plug 'mattn/emmet-vim'
 
-"Plugins for typescript development
-Plug 'leafgarland/typescript-vim'
-Plug 'Shougo/vimproc.vim', {'do' : 'make'}
-Plug 'HerringtonDarkholme/yats.vim'
-Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
+
 "linters
 Plug 'w0rp/ale'
-"Plug 'gryf/pylint-vim'
-"Plug 'nvie/vim-flake8'
-"
-"plugins for c# development
-"Plug 'OmniSharp/omnisharp-vim'
-"
+
 "version control
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 "show git status flags on files"
 Plug 'Xuyuanp/nerdtree-git-plugin'
-
-"manages tags files in vim
-Plug 'ludovicchabant/vim-gutentags'
-Plug 'skywind3000/gutentags_plus'
 

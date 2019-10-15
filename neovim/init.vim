@@ -110,8 +110,6 @@ nmap <leader>w :w<cr>
 "move a line up/down on normal mode
 noremap <Up> :m .-2<CR>==
 noremap <Down> :m .+1<CR>==
-"noremap <Left> <NOP>
-"noremap <Right> <NOP>
 "do nothing in insert mode
 "imap <Up> <NOP>
 "imap <Down> <NOP>
