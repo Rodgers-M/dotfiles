@@ -57,6 +57,9 @@ Plug 'isRuslan/vim-es6'
 Plug 'tpope/vim-surround'
 Plug 'alvan/vim-closetag'
 Plug 'moll/vim-node'
+" React code snippets
+Plug 'epilande/vim-react-snippets'
+
 "intellisense
 Plug 'leafgarland/typescript-vim'
 

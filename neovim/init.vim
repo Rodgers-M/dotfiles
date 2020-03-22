@@ -3,6 +3,9 @@
 ""brew tap caskroom/fonts
 "brew cask install font-hack-nerd-font
 "then change your ITerm2 Non-ASCII font to Hack Regular Nerd Font Complete 
+"
+"after installing dependencies also install the respective coc-server for your
+"perffered language. e.g for js/ts install coc-tsserver
 syntax on
 
 "set rtp+=~/.vim/bundle/Vundle.vim
