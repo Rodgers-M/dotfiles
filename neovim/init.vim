@@ -274,6 +274,13 @@ set wildignore+=*.pyc,*.swp,*.DS_Store,*tags*,
 "Nerdtree config for wildignore
 let NERDTreeRespectWildIgnore=1
 
+" coc-server settings
+" plugins
+" coc-prettier configuration
+command! -nargs=0 Prettier :CocCommand prettier.formatFile
+vmap <leader>f  <Plug>(coc-format-selected)
+nmap <leader>f  <Plug>(coc-format-selected)
+
 "lightline colorscheme
 set noshowmode
 let g:lightline = {
