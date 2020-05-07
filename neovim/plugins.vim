@@ -4,7 +4,8 @@ Plug 'kien/ctrlp.vim'
 Plug 'yegappan/mru' "show a list of most recently used files
 "docs => https://github.com/epmatsw/ag.vim/blob/master/README.md
 Plug 'rking/ag.vim' "install Ag on your machine: https://github.com/ggreer/the_silver_searcher
-Plug 'eugen0329/vim-esearch'
+"Plug 'eugen0329/vim-esearch'
+Plug 'dyng/ctrlsf.vim'
 "Fuzzy finder
 Plug '/usr/local/opt/fzf' "install fzf with brew for this to work
 Plug 'junegunn/fzf.vim' 
@@ -38,7 +39,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'ervandew/supertab'
 "close and delete matching pairs
 Plug 'jiangmiao/auto-pairs'
-Plug 'https://github.com/adelarsq/vim-matchit'
+Plug 'adelarsq/vim-matchit'
 "auto save files
 Plug 'vim-scripts/vim-auto-save'
 "tab completions
@@ -59,12 +60,15 @@ Plug 'alvan/vim-closetag'
 Plug 'moll/vim-node'
 " React code snippets
 Plug 'epilande/vim-react-snippets'
+"css plugin
+Plug 'ap/vim-css-color'
 
 "intellisense
 Plug 'leafgarland/typescript-vim'
 
 "Html plugins
 Plug 'mattn/emmet-vim'
+Plug 'Yggdroot/indentLine'
 
 
 "linters

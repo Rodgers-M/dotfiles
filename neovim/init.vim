@@ -84,6 +84,16 @@ set incsearch
 let g:ags_agexe = 'ag'
 "live substitution"
 set inccommand=nosplit
+noremap <leader>ff :CtrlSF 
+noremap <leader>ft :CtrlSFToggle<CR> 
+" let g:esearch = {
+  " \ 'adapter':          'ag',
+  " \ 'backend':          'nvim',
+  " \ 'out':              'win',
+  " \ 'batch_size':       1000,
+  " \ 'use':              ['visual', 'hlsearch', 'last'],
+  " \ 'default_mappings': 1,
+  " \}
 
 set showmatch
 set ignorecase
@@ -244,19 +254,6 @@ let g:deoplete#max_list = 20
 "make the enter key select the suggested popup
 inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
-imap ;d <div>
-imap ;p <p>
-imap ;a <a href=''><ESc>hi
-imap ;ul <ul><esc>li
-imap ;li <li><esc>li
-map ;h1 <h1><ESC>li
-map ;h2 <h2<ESC>li
-map ;h3 <h3><ESC>li
-map ;h4 <h4><ESC>li
-map ;h5 <h5><ESC>li
-imap ;sp <span><ESC>li
-imap ;i <input type='text' placeholder=''><ESC>2hi
-imap ;bt <button className=''><ESC>li
 imap ;im import  from '';<ESC>8hi
 "importing objects
 imap ;cim import {  } from '';<ESC>10hi
@@ -280,6 +277,10 @@ let NERDTreeRespectWildIgnore=1
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 vmap <leader>f  <Plug>(coc-format-selected)
 nmap <leader>f  <Plug>(coc-format-selected)
+
+"html and jsx
+"indentLine plugin
+let g:indentLine_enabled = 0
 
 "lightline colorscheme
 set noshowmode
