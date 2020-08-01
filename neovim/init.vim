@@ -1,5 +1,5 @@
-""""Note to self
-"to see file-type icons on file names, install ITerm Nerd fonts
+ """"Note to self
+"to see file-tkien/ctrlp.vimype icons on file names, install ITerm Nerd fonts
 ""brew tap caskroom/fonts
 "brew cask install font-hack-nerd-font
 "then change your ITerm2 Non-ASCII font to Hack Regular Nerd Font Complete 
@@ -260,6 +260,7 @@ imap ;cim import {  } from '';<ESC>10hi
 
 "Invoke CtrlP with starting directory
 nmap <leader>p <C-p>
+nmap <leader>s :Rg
 " ignore git files, node_modules and bower_components
 " it will load faster this way
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
@@ -281,6 +282,11 @@ nmap <leader>f  <Plug>(coc-format-selected)
 "html and jsx
 "indentLine plugin
 let g:indentLine_enabled = 0
+
+"terraform
+let g:terraform_align=1
+let g:terraform_fold_sections=1
+" let g:terraform_fmt_on_save=1
 
 "lightline colorscheme
 set noshowmode
