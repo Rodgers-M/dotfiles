@@ -1,5 +1,5 @@
  """"Note to self
-"to see file-tkien/ctrlp.vimype icons on file names, install ITerm Nerd fonts
+"to see file-type icons on file names, install ITerm Nerd fonts
 ""brew tap caskroom/fonts
 "brew cask install font-hack-nerd-font
 "then change your ITerm2 Non-ASCII font to Hack Regular Nerd Font Complete 

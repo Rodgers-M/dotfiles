@@ -13,7 +13,9 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'pechorin/any-jump.vim'
 
-
+"markdown
+Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
+"
 "Plug 'vim-scripts/LustyExplorer'
 Plug 'tpope/vim-vinegar'
 "add file icons
