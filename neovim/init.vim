@@ -1,11 +1,15 @@
  """"Note to self
 "to see file-type icons on file names, install ITerm Nerd fonts
-""brew tap caskroom/fonts
+
+""brew tap homebrew/cask-fonts
 "brew cask install font-hack-nerd-font
 "then change your ITerm2 Non-ASCII font to Hack Regular Nerd Font Complete 
 "
+"run this to enable python3 to be used by vim plugins
+" python3 -m pip install --user --upgrade pynvim
+"
 "after installing dependencies also install the respective coc-server for your
-"perffered language. e.g for js/ts install coc-tsserver
+"perffered language. e.g for js/ts install coc-tsserver, coc-prettier
 syntax on
 
 "set rtp+=~/.vim/bundle/Vundle.vim
@@ -19,7 +23,7 @@ Plug 'scrooloose/nerdtree', {'on': 'nerdtreetoggle'}
 so  ~/.config/nvim//plugins.vim
 
 call plug#end()            " required
-let g:NERDTreeIndicatorMapCustom = {
+let g:NERDTreeGitStatusIndicatorMapCustom = {
     \ "Modified"  : "✹",
     \ "Staged"    : "✚",
     \ "Untracked" : "✭",

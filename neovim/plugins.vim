@@ -61,6 +61,7 @@ Plug 'editorconfig/editorconfig-vim'
 
 "Plugins for typescript/javascript development
 Plug 'mxw/vim-jsx'
+Plug 'peitalin/vim-jsx-typescript'
 Plug 'isRuslan/vim-es6'
 Plug 'tpope/vim-surround'
 Plug 'alvan/vim-closetag'
@@ -86,6 +87,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 "show git status flags on files"
 Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'APZelos/blamer.nvim'
 
 Plug 'hashivim/vim-terraform'
 " Plug 'vim-syntastic/syntastic'
