@@ -43,7 +43,6 @@ set number relativenumber
 " toggle ralative line numbers
 nmap <leader>rn :set relativenumber!<CR>
 nmap <leader>tn :set relativenumber!<CR>
-nmap <leader>a :q<CR>
 "automatically toggle relative numbers on different situeations
 ""when in insert mode or buffer loses focus, turn off relative number
 augroup numbertoggle
@@ -115,7 +114,7 @@ map <leader><space> :nohlsearch<cr>
 nmap <leader>nl o<ESC>
 "add a new line above  the current
 nmap <leader>nL O<ESC>
-"nmap <leader>q :q<cr>
+nmap <leader>q :q<CR>
 nmap <space> i<space><ESC>
 "console log shortcut"
 imap <leader>clg console.log(
@@ -290,8 +289,11 @@ let g:indentLine_enabled = 0
 "terraform
 let g:terraform_align=1
 let g:terraform_fold_sections=1
-" let g:terraform_fmt_on_save=1
 
+" disable the red highlight on JSON comments
+autocmd FileType json syntax match Comment +\/\/.\+$+
+
+" let g:terraform_fmt_on_save=1
 "lightline colorscheme
 set noshowmode
 let g:lightline = {
