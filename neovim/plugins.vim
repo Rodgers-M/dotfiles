@@ -92,3 +92,7 @@ Plug 'APZelos/blamer.nvim'
 Plug 'hashivim/vim-terraform'
 " Plug 'vim-syntastic/syntastic'
 Plug 'juliosueiras/vim-terraform-completion'
+
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
+"install ripgrep brew install ripgrep

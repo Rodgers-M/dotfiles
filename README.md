@@ -30,6 +30,9 @@ this should be good to get you started
 [video showing how to use emmet for html snippets](https://youtu.be/Sc30cyEH5oo?t=405)
 do `:help map-which-keys ` for vim's suggestions on what keys to map.
 
+# see link below to setup nerd fonts on the terminal
+[installing nerd fonts](https://webinstall.dev/nerdfont/)
+
 # Tip
 after installing dependencies also install the respective coc-server for your perffered language. e.g for js/ts install [coc-tsserver](https://github.com/neoclide/coc-tsserver)
 

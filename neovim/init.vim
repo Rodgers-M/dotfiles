@@ -199,9 +199,9 @@ let g:alet_completion = 1
 
 "cnfigurations for closetag plugin
 "enable autoclose in the following file types
-let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.js,*.jsx'
+let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.js,*.jsx,*.ts,*.tsx'
 " This will make the list of non-closing tags self-closing in the specified files.
-let g:closetag_xhtml_filenames = '*.xhtml,*.js,*.jsx'
+let g:closetag_xhtml_filenames = '*.xhtml,*.js,*.jsx,*.ts,*.tsx'
 " integer value [0|1]
 " This will make the list of non-closing tags case-sensitive (e.g. `<Link>` will be closed while `<link>` won't.)
 
@@ -272,7 +272,7 @@ let g:ctrlp_custom_ignore = 'node_modules\|bower_compnents\|DS_Store\|git'
 "make Gdiff always open vertical splits
 set diffopt+=vertical
 
-set wildignore+=*.pyc,*.swp,*.DS_Store,*tags*,
+set wildignore+=*.pyc,*.swp,*.DS_Store,*.tags*,
 "Nerdtree config for wildignore
 let NERDTreeRespectWildIgnore=1
 
