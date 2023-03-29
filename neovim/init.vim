@@ -79,6 +79,7 @@ autocmd Filetype html setlocal ts=2 sw=2 expandtab
 autocmd Filetype python setlocal ts=4 sw=4 expandtab
 autocmd Filetype javascript setlocal ts=2 sw=2 expandtab
 autocmd Filetype typescript setlocal ts=2 sw=2 expandtab
+autocmd Filetype php setlocal ts=2 sw=2 expandtab
 "flag any whitespace in a python file
 
 "searching
@@ -88,6 +89,7 @@ let g:ags_agexe = 'ag'
 "live substitution"
 set inccommand=nosplit
 noremap <leader>ff :CtrlSF 
+noremap <leader>fo :CtrlSFOpen 
 noremap <leader>ft :CtrlSFToggle<CR> 
 " let g:esearch = {
   " \ 'adapter':          'ag',
@@ -198,7 +200,7 @@ let g:alet_completion = 1
 
 "cnfigurations for closetag plugin
 "enable autoclose in the following file types
-let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.js,*.jsx,*.ts,*.tsx'
+let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.js,*.jsx,*.ts,*.tsx, *.php'
 " This will make the list of non-closing tags self-closing in the specified files.
 let g:closetag_xhtml_filenames = '*.xhtml,*.js,*.jsx,*.ts,*.tsx'
 " integer value [0|1]
@@ -264,6 +266,7 @@ imap ;cim import {  } from '';<ESC>10hi
 "Invoke CtrlP with starting directory
 nmap <leader>p <C-p>
 nmap <leader>s :Rg
+let g:ctrlp_working_path_mode = 'r'
 " ignore git files, node_modules and bower_components
 " it will load faster this way
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
