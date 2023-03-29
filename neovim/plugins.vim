@@ -66,6 +66,7 @@ Plug 'isRuslan/vim-es6'
 Plug 'tpope/vim-surround'
 Plug 'alvan/vim-closetag'
 Plug 'moll/vim-node'
+Plug 'pangloss/vim-javascript'
 " React code snippets
 Plug 'epilande/vim-react-snippets'
 "css plugin
@@ -77,7 +78,10 @@ Plug 'leafgarland/typescript-vim'
 "Html plugins
 Plug 'mattn/emmet-vim'
 Plug 'Yggdroot/indentLine'
+Plug 'othree/html5.vim'
 
+"graphql plugins
+Plug 'jparise/vim-graphql'
 
 "linters
 Plug 'w0rp/ale'
@@ -96,3 +100,7 @@ Plug 'juliosueiras/vim-terraform-completion'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
 "install ripgrep brew install ripgrep
+"
+"FUN
+Plug 'Eandrju/cellular-automaton.nvim'
+
