@@ -71,6 +71,8 @@ Plug 'pangloss/vim-javascript'
 Plug 'epilande/vim-react-snippets'
 "css plugin
 Plug 'ap/vim-css-color'
+"file size in javascript/typescript
+Plug 'yardnsm/vim-import-cost', { 'do': 'npm install --omit=dev' }
 
 "intellisense
 Plug 'leafgarland/typescript-vim'

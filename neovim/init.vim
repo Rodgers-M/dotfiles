@@ -88,7 +88,13 @@ set incsearch
 let g:ags_agexe = 'ag'
 "live substitution"
 set inccommand=nosplit
-noremap <leader>ff :CtrlSF 
+
+"search configs
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+noremap <leader>cff :CtrlSF 
 noremap <leader>fo :CtrlSFOpen 
 noremap <leader>ft :CtrlSFToggle<CR> 
 " let g:esearch = {
@@ -267,9 +273,9 @@ imap ;cim import {  } from '';<ESC>10hi
 nmap <leader>p <C-p>
 nmap <leader>s :Rg
 let g:ctrlp_working_path_mode = 'r'
-" ignore git files, node_modules and bower_components
+"ignore files in .gitignore file
 " it will load faster this way
-let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 let g:ctrlp_custom_ignore = 'node_modules\|bower_compnents\|DS_Store\|git'
 "make Gdiff always open vertical splits
 set diffopt+=vertical
