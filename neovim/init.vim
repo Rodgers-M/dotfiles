@@ -263,7 +263,7 @@ let g:tern#command = ["tern"]
 let g:tern#arguments = [" — persistent"]
 let g:deoplete#max_list = 20
 "make the enter key select the suggested popup
-inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+" inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
 imap ;im import  from '';<ESC>8hi
 "importing objects
@@ -287,9 +287,14 @@ let NERDTreeRespectWildIgnore=1
 " coc-server settings
 " plugins
 " coc-prettier configuration
+" coc extensions
+"coc-extensions
+let g:coc_global_extensions = ['coc-tsserver', 'coc-prettier', 'coc-css']
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 vmap <leader>f  <Plug>(coc-format-selected)
 nmap <leader>f  <Plug>(coc-format-selected)
+
+
 
 "html and jsx
 "indentLine plugin
