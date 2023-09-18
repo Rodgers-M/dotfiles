@@ -1,4 +1,6 @@
 -- :help options
+vim.cmd [[syntax on]]
+
 vim.opt.backup = false                          -- creates a backup file
 vim.opt.clipboard = "unnamedplus"               -- allows neovim to access the system clipboard
 vim.opt.cmdheight = 2                           -- more space in the neovim command line for displaying messages
@@ -30,7 +32,7 @@ vim.opt.relativenumber = true                  -- set relative numbered lines
 vim.opt.numberwidth = 4                         -- set number column width to 2 {default 4}
 vim.opt.signcolumn = "yes"                      -- always show the sign column, otherwise it would shift the text each time
 vim.opt.wrap = false                            -- display lines as one long line
-vim.opt.scrolloff = 4                           -- is one of my fav
+vim.opt.scrolloff = 8                           -- is one of my fav
 vim.opt.sidescrolloff = 4
 vim.opt.guifont = "monospace:h17"               -- the font used in graphical neovim applications
 
@@ -62,7 +64,13 @@ vim.cmd [[set wildignore+=*.pyc,*.swp,*.DS_Store,*.tags*,]]
 
 vim.cmd [[set background=dark ]]
 
-vim.cmd [[colorscheme gruvbox]]
+vim.cmd [[set termguicolors]]
+---vim.cmd("colorscheme rose-pine")
+-- vim.cmd [[colorscheme miasma]] -- xero/miasma.nvim
+ -- vim.cmd [[colorscheme ennui]] --- Myagko/ennui
+ -- vim.cmd [[colorscheme darkplus]] --- lunarvim/darkplus.nvim
+ vim.cmd [[colorscheme neodark]] --- 
+
 
 -- these are used by 'Xuyuanp/nerdtree-git-plugin' plugin
 vim.cmd [[
@@ -79,3 +87,18 @@ vim.cmd [[
         \ "Unknown"   : "?"
         \ }
 ]]
+
+-- vim.cmd [[
+  -- let g:coc_global_extensions = [ 'coc-prettier', 'coc-css', 'coc-tslint-plugin', 'coc-html' ]
+-- ]]
+
+-- add :Prettier command 
+-- vim.cmd[[ command! -nargs=0 Prettier :CocCommand prettier.forceFormatDocument ]]
+
+-- nerdcommenter
+-- add space delimiters after comment
+vim.cmd [[let g:NERDSpaceDelims = 1]]
+vim.cmd [[let g:NERDCommentEmptyLines = 1]]
+ -- typescript
+vim.cmd [[ au BufNewFile,BufRead *.ts setlocal filetype=typescript]]
+vim.cmd [[ au BufNewFile,BufRead *.ts setlocal filetype=typescript]]

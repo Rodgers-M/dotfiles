@@ -63,43 +63,72 @@ return packer.startup(function(use)
   use 'Xuyuanp/nerdtree-git-plugin' -- show git status flags on files
   
   -- Colorschemes
-  use "morhetz/gruvbox" 
+ use "morhetz/gruvbox" 
+ use "lunarvim/darkplus.nvim"
+ use({ 'rose-pine/neovim', as = 'rose-pine' })
+ use "KeitaNakamura/neodark.vim"
+
 
   -- dev icons
   use "ryanoasis/vim-devicons"
 
   -- cmp plugins
-  use "hrsh7th/nvim-cmp" -- The completion plugin
+  use "hrsh7th/nvim-cmp"
   use "hrsh7th/cmp-buffer" -- buffer completions
   use "hrsh7th/cmp-path" -- path completions
   use "hrsh7th/cmp-cmdline" -- cmdline completions
   use "saadparwaiz1/cmp_luasnip" -- snippet completions
   use "hrsh7th/cmp-nvim-lsp"
-  -- use "hrsh7th/cmp-nvim-lsp"
+
   -- use "hrsh7th/cmp-nvim-lua"
 
   -- snippets
   use "L3MON4D3/LuaSnip" --snippet engine
   use "rafamadriz/friendly-snippets" -- a bunch of snippets to use  
 
+  -- treesitter
+  use ('nvim-treesitter/nvim-treesitter', {run  = ':TSUpdate'})
+  -- autocompletion and intelisence
+  -- use { 'neoclide/coc.nvim', branch='release' }
+
+
   -- LSP
+  use "williamboman/mason.nvim" -- simple to use language server installer
+  use "williamboman/mason-lspconfig.nvim" -- simple to use language server installer
   use "neovim/nvim-lspconfig" -- enable LSP
-  use "williamboman/nvim-lsp-installer"
-  --use "williamboman/mason.nvim" -- simple to use language server installer
-  --use "williamboman/mason-lspconfig.nvim" -- simple to use language server installer
-  --use 'jose-elias-alvarez/null-ls.nvim' -- LSP diagnostics and code actions
+  use "jose-elias-alvarez/null-ls.nvim"
+
+  -- improve vim.ui interface
+  use "stevearc/dressing.nvim"
 
 
   -- Telescope
   use "nvim-telescope/telescope.nvim"
   use "nvim-telescope/telescope-media-files.nvim"
+
+  -- javascript development
+  -- use "leafgarland/typescript-vim"
+  use "ianks/vim-tsx"
+  use "maxmellon/vim-jsx-pretty"
+  use 'peitalin/vim-jsx-typescript'
+  -- use 'isRuslan/vim-es6'
+  -- use 'pangloss/vim-javascript'
+  -- use 'dikiaap/minimalist'
+
+  -- vim soround
+  use 'tpope/vim-surround'
+  use 'alvan/vim-closetag'
+
+  -- comments
+  use 'scrooloose/nerdcommenter'
+
+  -- Version control and  Git
+  use  'airblade/vim-gitgutter'
+  use  'tpope/vim-fugitive'
+
+  -- undotree
+  use 'mbbill/undotree'
   
-
-  -- Treesitter
-
-
-  -- Git
-
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

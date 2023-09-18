@@ -1,6 +1,6 @@
 "file browsing and searching"
 Plug 'scrooloose/nerdtree'
-Plug 'kien/ctrlp.vim'
+Plug 'ctrlpvim/ctrlp.vim'
 Plug 'google/vim-searchindex'
 Plug 'yegappan/mru' "show a list of most recently used files
 "docs => https://github.com/epmatsw/ag.vim/blob/master/README.md
@@ -44,7 +44,7 @@ Plug 'itchyny/lightline.vim'
 "Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 "auto completion
-Plug 'ervandew/supertab'
+"Plug 'ervandew/supertab'
 "close and delete matching pairs
 Plug 'jiangmiao/auto-pairs'
 Plug 'adelarsq/vim-matchit'

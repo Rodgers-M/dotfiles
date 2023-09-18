@@ -71,3 +71,47 @@ keymap('n', '<leader>ff', '<cmd>Telescope find_files<CR>', opts)
 keymap('n', '<leader>fg', '<cmd>Telescope live_grep<CR>', opts)
 keymap('n', '<leader>fb', '<cmd>Telescope buffers<CR>', opts)
 
+--coc vim
+--vim.cmd [[ inoremap <expr> <cr> coc#pum#visible() ? coc#pum#confirm() : "\<CR>" ]]
+--vim.cmd [[inoremap <silent><expr> <cr> coc#pum#visible() ? coc#_select_confirm() : "\<C-g>u\<CR>"]]
+
+vim.cmd [[
+  " use <tab> to trigger completion and navigate to the next complete item
+  function! CheckBackspace() abort
+    let col = col('.') - 1
+    return !col || getline('.')[col - 1]  =~# '\s'
+  endfunction
+]]
+
+-- vim.cmd [[
+  -- inoremap <silent><expr> <Tab>
+        -- \ coc#pum#visible() ? coc#pum#next(1) :
+        -- \ CheckBackspace() ? "\<Tab>" :
+        -- \ coc#refresh()
+-- ]]
+
+keymap('n', '<leader>f', '<Plug>(coc-format-selected)', opts )
+
+
+
+-- vim-sorround 'mappings'
+keymap('n', '<leader>mm)', 'ysiw)', opts)
+keymap('n', '<leader>mm]', 'ysiw]', opts)
+keymap('n', '<leader>mm}', 'ysiw}w<space>lw<space>e', opts)
+
+ -- custom sorround mappings
+keymap ('n', '<leader>qw',  "bcw''<ESC>hp", opts) 
+keymap ('n', '<leader>dq',  'bcw""<ESC>hp', opts)
+keymap ('v', '<leader>qw', "c''<ESC>hp", opts)
+keymap ('v', '<leader>dq',  'c""<ESC>hp', opts) 
+
+ -- sorround selected text in  brackets, parenthesis, e.t.c
+keymap ('v', '<leader>{', 'c{ }<esc>hpli<space><esc>2l', opts)
+keymap ('v', '<leader>[', 'c[]<esc>hp', opts)
+keymap ('v', '<leader>(', 'c()<esc>hp', opts)
+
+-- undotree 
+keymap('n', '<leader>u', ':UndotreeToggle<CR>', opts)
+
+-- clear search highlight
+keymap('n', '<leader><space>',  ':nohlsearch<cr>', opts)
