@@ -1,4 +1,4 @@
-vim.cmd [[
+vim.cmd([[
     "automatically toggle relative numbers on different situeations
     "when in insert mode or buffer loses focus, turn off relative number
     augroup numbertoggle
@@ -16,4 +16,10 @@ vim.cmd [[
     autocmd Filetype javascript setlocal ts=2 sw=2 expandtab
     autocmd Filetype typescript setlocal ts=2 sw=2 expandtab
     autocmd Filetype php setlocal ts=2 sw=2 expandtab
-]]
+
+    "jump back to last position when reopening a file
+    if has("autocmd")
+      au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
+        \| exe "normal! g'\"" | endif
+    endif
+]])
