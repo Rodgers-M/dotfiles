@@ -146,4 +146,10 @@ return {
 		},
 		build = ":TSUpdate",
 	},
+	-- javascript development
+	"maxmellon/vim-jsx-pretty",
+	"peitalin/vim-jsx-typescript",
+
+	--splits / windows management
+	"wesQ3/vim-windowswap",
 }
