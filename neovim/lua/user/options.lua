@@ -71,7 +71,7 @@ vim.cmd([[set termguicolors]])
 -- vim.cmd [[colorscheme miasma]] -- xero/miasma.nvim
 -- vim.cmd [[colorscheme ennui]] --- Myagko/ennui
 -- vim.cmd [[colorscheme darkplus]] --- lunarvim/darkplus.nvim
--- vim.cmd([[colorscheme neodark]]) ---
+-- vim.cmd([[colorscheme gruvbox]]) ---
 
 -- these are used by 'Xuyuanp/nerdtree-git-plugin' plugin
 vim.cmd([[
@@ -87,6 +87,13 @@ vim.cmd([[
         \ 'Ignored'   : '☒',
         \ "Unknown"   : "?"
         \ }
+]])
+
+-- when you delete or rename a file, always delete its associated buffer
+vim.cmd([[
+  let NERDTreeAutoDeleteBuffer=1
+  let NERDTreeMinimalUI = 1
+  let NERDTreeDirArrows = 1
 ]])
 
 -- vim.cmd [[
