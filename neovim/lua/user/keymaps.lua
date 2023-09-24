@@ -69,6 +69,7 @@ keymap("n", "<leader>r", ":NERDTreeFind<cr>", opts)
 
 --telescope
 keymap("n", "<leader>ff", "<cmd>Telescope find_files<CR>", opts)
+keymap("n", "<leader>gf", "<cmd>Telescope find_files<CR>", opts)
 keymap("n", "<leader>fg", "<cmd>Telescope live_grep<CR>", opts)
 keymap("n", "<leader>fb", "<cmd>Telescope buffers<CR>", opts)
 
@@ -114,3 +115,5 @@ keymap("n", "<leader>u", ":UndotreeToggle<CR>", opts)
 
 -- clear search highlight
 keymap("n", "<leader><space>", ":nohlsearch<cr>", opts)
+
+keymap("n", "<leader>as", ":ASToggle<CR>", opts)
