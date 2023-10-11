@@ -15,6 +15,9 @@ return {
 
 	-- preview css colors
 	"ap/vim-css-color",
+	-- html react plugins
+	"mattn/emmet-vim",
+	"tpope/vim-surround",
 
 	-- auto save
 	{
@@ -93,16 +96,20 @@ return {
 			end,
 		},
 
-		{
-			-- Add indentation guides even on blank lines
-			"lukas-reineke/indent-blankline.nvim",
-			-- Enable `lukas-reineke/indent-blankline.nvim`
-			-- See `:help indent_blankline.txt`
-			opts = {
-				char = "┊",
-				show_trailing_blankline_indent = false,
-			},
-		},
+		-- {
+		-- -- Add indentation guides even on blank lines
+		-- "lukas-reineke/indent-blankline.nvim",
+		-- -- Enable `lukas-reineke/indent-blankline.nvim`
+		-- -- See `:help indent_blankline.txt`
+		-- config = function()
+		-- require("ibl").setup({
+		-- indent = {
+		-- char = "┊",
+		-- },
+		-- show_trailing_blankline_indent = false,
+		-- })
+		-- end,
+		-- },
 
 		-- "gc" to comment visual regions/lines
 		-- { 'numToStr/Comment.nvim', opts = {} },
@@ -118,6 +125,28 @@ return {
 		{
 			-- Highlight, edit, and navigate code
 			"nvim-treesitter/nvim-treesitter",
+			config = function()
+				local treesitter = require("nvim-treesitter.configs")
+				treesitter.setup({
+					highligh = {
+						enable = true,
+					},
+					indent = { enable = true },
+					ensure_installed = {
+						"json",
+						"javascript",
+						"typescript",
+						"tsx",
+						"html",
+						"css",
+						"lua",
+						"dockerfile",
+						"gitignore",
+						"graphql",
+						"vim",
+					},
+				})
+			end,
 			dependencies = {
 				"nvim-treesitter/nvim-treesitter-textobjects",
 			},
