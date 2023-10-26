@@ -122,36 +122,6 @@ return {
 			opts = {}, -- this is equalent to setup({}) function
 		},
 
-		{
-			-- Highlight, edit, and navigate code
-			"nvim-treesitter/nvim-treesitter",
-			config = function()
-				local treesitter = require("nvim-treesitter.configs")
-				treesitter.setup({
-					highligh = {
-						enable = true,
-					},
-					indent = { enable = true },
-					ensure_installed = {
-						"json",
-						"javascript",
-						"typescript",
-						"tsx",
-						"html",
-						"css",
-						"lua",
-						"dockerfile",
-						"gitignore",
-						"graphql",
-						"vim",
-					},
-				})
-			end,
-			dependencies = {
-				"nvim-treesitter/nvim-treesitter-textobjects",
-			},
-			build = ":TSUpdate",
-		},
 		-- javascript development
 		"maxmellon/vim-jsx-pretty",
 		"peitalin/vim-jsx-typescript",
