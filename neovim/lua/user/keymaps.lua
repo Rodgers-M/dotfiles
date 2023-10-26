@@ -108,6 +108,7 @@ keymap("v", "<leader>dq", 'c""<ESC>hp', opts)
 -- sorround selected text in  brackets, parenthesis, e.t.c
 keymap("v", "<leader>{", "c{ }<esc>hpli<space><esc>2l", opts)
 keymap("v", "<leader>[", "c[]<esc>hp", opts)
+keymap("v", "<leader><", "c<><esc>hp", opts)
 keymap("v", "<leader>(", "c()<esc>hp", opts)
 
 -- undotree
