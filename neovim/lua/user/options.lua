@@ -61,6 +61,8 @@ vim.cmd([[set autochdir]])
 
 -- open vertical splits to the right
 vim.cmd([[set splitright]])
+-- open git diff splits to the right
+vim.cmd([[set diffopt+=vertical]])
 
 vim.cmd([[set wildignore+=*.pyc,*.swp,*.DS_Store,*.tags*,]])
 
