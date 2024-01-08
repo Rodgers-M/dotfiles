@@ -111,10 +111,13 @@ keymap("v", "<leader>[", "c[]<esc>hp", opts)
 keymap("v", "<leader><", "c<><esc>hp", opts)
 keymap("v", "<leader>(", "c()<esc>hp", opts)
 
+-- quick pairs
+keymap("i", "<leader><", "<><ESC>i", opts)
+
 -- undotree
 keymap("n", "<leader>u", ":UndotreeToggle<CR>", opts)
 
 -- clear search highlight
-keymap("n", "<leader><space>", ":nohlsearch<cr>", opts)
+keymap("n", "<leader><space>", ":nohlsearch<cr>", opts) --highlight search
 
-keymap("n", "<leader>as", ":ASToggle<CR>", opts)
+keymap("n", "<leader>as", ":ASToggle<CR>", opts) --autosave
