@@ -4,6 +4,8 @@ A repo for my dotfiles, especially vim files
 
 ### Contents
 
+TODO: document how to setup neovim with Lazyvim
+
 the repo was initaily meant for hosting vim files.
 I however switched to using neovim and hence the neovim folder.
 The .vim folder has a file containing plugins i use with vim.
@@ -40,6 +42,8 @@ do `:help map-which-keys ` for vim's suggestions on what keys to map.
 # see link below to setup nerd fonts on the terminal
 
 [installing nerd fonts](https://webinstall.dev/nerdfont/)
+
+[showing diagnostic window on hover](https://neovim.discourse.group/t/how-to-show-diagnostics-on-hover/3830)
 
 # Tip
 
