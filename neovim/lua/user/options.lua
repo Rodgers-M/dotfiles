@@ -1,5 +1,6 @@
 -- :help options
 vim.cmd([[syntax on]])
+vim.cmd([[set encoding=UTF-8]])
 
 vim.opt.backup = false -- creates a backup file
 vim.opt.clipboard = "unnamedplus" -- allows neovim to access the system clipboard
