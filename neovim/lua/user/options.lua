@@ -3,7 +3,7 @@ vim.cmd([[syntax on]])
 vim.cmd([[set encoding=UTF-8]])
 
 vim.opt.backup = false -- creates a backup file
-vim.opt.clipboard = "unnamedplus" -- allows neovim to access the system clipboard
+-- vim.opt.clipboard = "unnamedplus" -- allows neovim to access the system clipboard
 vim.opt.cmdheight = 2 -- more space in the neovim command line for displaying messages
 vim.opt.completeopt = { "menuone", "noselect" } -- mostly just for cmp
 vim.opt.conceallevel = 0
@@ -34,7 +34,6 @@ vim.opt.relativenumber = true -- set relative numbered lines
 vim.opt.number = true -- set relative numbered lines
 vim.opt.numberwidth = 4 -- set number column width to 2 {default 4}
 vim.opt.signcolumn = "yes" -- always show the sign column, otherwise it would shift the text each time
-vim.opt.wrap = false -- display lines as one long line
 vim.opt.scrolloff = 8 -- is one of my fav
 vim.opt.sidescrolloff = 4
 vim.opt.guifont = "monospace:h17" -- the font used in graphical neovim applications
