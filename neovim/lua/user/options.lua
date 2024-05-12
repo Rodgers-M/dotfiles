@@ -111,4 +111,3 @@ vim.cmd([[let g:NERDSpaceDelims = 1]])
 vim.cmd([[let g:NERDCommentEmptyLines = 1]])
 -- typescript
 vim.cmd([[ au BufNewFile,BufRead *.ts setlocal filetype=typescript]])
-vim.cmd([[ au BufNewFile,BufRead *.ts setlocal filetype=typescript]])
