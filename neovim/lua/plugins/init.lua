@@ -22,6 +22,9 @@ return {
 	-- rust plugin
 	"rust-lang/rust.vim",
 
+	-- svelte
+	"leafOfTree/vim-svelte-plugin",
+
 	{
 		"mrcjkb/rustaceanvim",
 		version = "^4", -- Recommended
