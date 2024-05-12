@@ -206,7 +206,7 @@ let g:alet_completion = 1
 
 "cnfigurations for closetag plugin
 "enable autoclose in the following file types
-let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.js,*.jsx,*.ts,*.tsx, *.php'
+let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.js,*.jsx,*.ts,*.tsx, *.php, *.svelte'
 " This will make the list of non-closing tags self-closing in the specified files.
 let g:closetag_xhtml_filenames = '*.xhtml,*.js,*.jsx,*.ts,*.tsx'
 " integer value [0|1]
