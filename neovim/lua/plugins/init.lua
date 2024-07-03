@@ -140,5 +140,6 @@ return {
 
 		--splits / windows management
 		"wesQ3/vim-windowswap",
+		{ "szw/vim-maximizer", keys = { { "<leader>mx", "<cmd>MaximizerToggle<CR>" } } },
 	},
 }
