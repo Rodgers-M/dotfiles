@@ -15,6 +15,7 @@ return {
 		local keymap = vim.keymap -- for conciseness
 
 		local opts = { noremap = true, silent = true }
+
 		local on_attach = function(client, bufnr)
 			opts.buffer = bufnr
 
@@ -133,6 +134,11 @@ return {
 
 		-- configure python server
 		lspconfig["pyright"].setup({
+			capabilities = capabilities,
+			on_attach = on_attach,
+		})
+
+		lspconfig["csharp_ls"].setup({
 			capabilities = capabilities,
 			on_attach = on_attach,
 		})
