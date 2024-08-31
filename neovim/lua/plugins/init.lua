@@ -137,5 +137,8 @@ return {
 		--splits / windows management
 		"wesQ3/vim-windowswap",
 		{ "szw/vim-maximizer", keys = { { "<leader>mx", "<cmd>MaximizerToggle<CR>" } } },
+
+		-- file icons on nerdtree sidebar
+		-- "ryanoasis/vim-devicons",
 	},
 }
