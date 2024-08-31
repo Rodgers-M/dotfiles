@@ -48,6 +48,7 @@ return {
 			ensure_installed = {
 				"prettier",
 				"eslint_d",
+				"eslint",
 				"stylua",
 			},
 		})
