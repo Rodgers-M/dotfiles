@@ -9,6 +9,7 @@ return {
 		"rafamadriz/friendly-snippets", -- useful snippets
 		"onsails/lspkind.nvim", -- vs-code like pictograms
 		"hrsh7th/cmp-nvim-lsp", --  LSP completion capabilities
+		"mlaursen/vim-react-snippets", -- react snippets
 	},
 	config = function()
 		local cmp = require("cmp")
@@ -24,6 +25,8 @@ return {
 
 		-- loads vscode style snippets from installed plugins (e.g. friendly-snippets)
 		require("luasnip.loaders.from_vscode").lazy_load()
+		-- load react snippets
+		require("vim-react-snippets").lazy_load()
 
 		cmp.setup({
 			completion = {
