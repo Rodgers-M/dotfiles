@@ -51,94 +51,94 @@ return {
 	{
 		"folke/which-key.nvim",
 		opts = {},
-		{
-			-- Adds git related signs to the gutter, as well as utilities for managing changes
-			"lewis6991/gitsigns.nvim",
-			opts = {
-				-- See `:help gitsigns.txt`
-				signs = {
-					add = { text = "+" },
-					change = { text = "~" },
-					delete = { text = "_" },
-					topdelete = { text = "‾" },
-					changedelete = { text = "~" },
-				},
-				on_attach = function(bufnr)
-					vim.keymap.set(
-						"n",
-						"<leader>hp",
-						require("gitsigns").preview_hunk,
-						{ buffer = bufnr, desc = "Preview git hunk" }
-					)
-
-					-- don't override the built-in and fugitive keymaps
-					local gs = package.loaded.gitsigns
-					vim.keymap.set({ "n", "v" }, "]c", function()
-						if vim.wo.diff then
-							return "]c"
-						end
-						vim.schedule(function()
-							gs.next_hunk()
-						end)
-						return "<Ignore>"
-					end, { expr = true, buffer = bufnr, desc = "Jump to next hunk" })
-					vim.keymap.set({ "n", "v" }, "[c", function()
-						if vim.wo.diff then
-							return "[c"
-						end
-						vim.schedule(function()
-							gs.prev_hunk()
-						end)
-						return "<Ignore>"
-					end, { expr = true, buffer = bufnr, desc = "Jump to previous hunk" })
-				end,
+	},
+	{
+		-- Adds git related signs to the gutter, as well as utilities for managing changes
+		"lewis6991/gitsigns.nvim",
+		opts = {
+			-- See `:help gitsigns.txt`
+			signs = {
+				add = { text = "+" },
+				change = { text = "~" },
+				delete = { text = "_" },
+				topdelete = { text = "‾" },
+				changedelete = { text = "~" },
 			},
-		},
+			on_attach = function(bufnr)
+				vim.keymap.set(
+					"n",
+					"<leader>hp",
+					require("gitsigns").preview_hunk,
+					{ buffer = bufnr, desc = "Preview git hunk" }
+				)
 
-		{
-			-- Theme inspired by Atom
-			"navarasu/onedark.nvim",
-			priority = 1000,
-			config = function()
-				vim.cmd.colorscheme("onedark")
+				-- don't override the built-in and fugitive keymaps
+				local gs = package.loaded.gitsigns
+				vim.keymap.set({ "n", "v" }, "]c", function()
+					if vim.wo.diff then
+						return "]c"
+					end
+					vim.schedule(function()
+						gs.next_hunk()
+					end)
+					return "<Ignore>"
+				end, { expr = true, buffer = bufnr, desc = "Jump to next hunk" })
+				vim.keymap.set({ "n", "v" }, "[c", function()
+					if vim.wo.diff then
+						return "[c"
+					end
+					vim.schedule(function()
+						gs.prev_hunk()
+					end)
+					return "<Ignore>"
+				end, { expr = true, buffer = bufnr, desc = "Jump to previous hunk" })
 			end,
 		},
-
-		-- {
-		-- -- Add indentation guides even on blank lines
-		-- "lukas-reineke/indent-blankline.nvim",
-		-- -- Enable `lukas-reineke/indent-blankline.nvim`
-		-- -- See `:help indent_blankline.txt`
-		-- config = function()
-		-- require("ibl").setup({
-		-- indent = {
-		-- char = "┊",
-		-- },
-		-- show_trailing_blankline_indent = false,
-		-- })
-		-- end,
-		-- },
-
-		-- "gc" to comment visual regions/lines
-		-- { 'numToStr/Comment.nvim', opts = {} },
-		{ "scrooloose/nerdcommenter" },
-
-		-- auto pairs
-		{
-			"windwp/nvim-autopairs",
-			event = "InsertEnter",
-			opts = {}, -- this is equalent to setup({}) function
-		},
-
-		-- javascript development
-		"maxmellon/vim-jsx-pretty",
-		"peitalin/vim-jsx-typescript",
-
-		--splits / windows management
-		"wesQ3/vim-windowswap",
-		{ "szw/vim-maximizer", keys = { { "<leader>mx", "<cmd>MaximizerToggle<CR>" } } },
-
-		-- file icons on nerdtree sidebar
-		-- "ryanoasis/vim-devicons",
 	},
+
+	{
+		-- Theme inspired by Atom
+		"navarasu/onedark.nvim",
+		priority = 1000,
+		config = function()
+			vim.cmd.colorscheme("onedark")
+		end,
+	},
+
+	-- {
+	-- -- Add indentation guides even on blank lines
+	-- "lukas-reineke/indent-blankline.nvim",
+	-- -- Enable `lukas-reineke/indent-blankline.nvim`
+	-- -- See `:help indent_blankline.txt`
+	-- config = function()
+	-- require("ibl").setup({
+	-- indent = {
+	-- char = "┊",
+	-- },
+	-- show_trailing_blankline_indent = false,
+	-- })
+	-- end,
+	-- },
+
+	-- "gc" to comment visual regions/lines
+	-- { "numToStr/Comment.nvim", opts = {} },
+	{ "scrooloose/nerdcommenter" },
+
+	-- auto pairs
+	{
+		"windwp/nvim-autopairs",
+		event = "InsertEnter",
+		opts = {}, -- this is equalent to setup({}) function
+	},
+
+	-- javascript development
+	"maxmellon/vim-jsx-pretty",
+	"peitalin/vim-jsx-typescript",
+
+	--splits / windows management
+	"wesQ3/vim-windowswap",
+	{ "szw/vim-maximizer", keys = { { "<leader>mx", "<cmd>MaximizerToggle<CR>" } } },
+
+	-- file icons on nerdtree sidebar
+	-- "ryanoasis/vim-devicons",
 }
