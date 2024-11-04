@@ -34,17 +34,13 @@ return {
 	-- auto save
 	{
 		"pocco81/auto-save.nvim",
-		config = function()
-			require("auto-save").setup()
-		end,
+		opts = {},
 	},
 
 	--auto close tags
 	{
 		"windwp/nvim-ts-autotag",
-		config = function()
-			require("nvim-ts-autotag").setup()
-		end,
+		opts = {},
 	},
 
 	-- Useful plugin to show you pending keybinds.
@@ -97,11 +93,14 @@ return {
 	},
 
 	{
-		-- Theme inspired by Atom
 		"navarasu/onedark.nvim",
 		priority = 1000,
-		config = function()
-			vim.cmd.colorscheme("onedark")
+		opts = {
+			style = "dark", -- optional: choose your preferred style (e.g., dark, deep, warm, cool)
+		},
+		config = function(_, opts)
+			require("onedark").setup(opts)
+			require("onedark").load()
 		end,
 	},
 
