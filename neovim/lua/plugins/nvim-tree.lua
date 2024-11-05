@@ -20,8 +20,18 @@ return {
 			sort = {
 				sorter = "case_sensitive",
 			},
+			actions = {
+				open_file = {
+					window_picker = {
+						enable = false,
+					},
+				},
+			},
 			filters = {
 				dotfiles = true,
+			},
+			git = {
+				ignore = false,
 			},
 		})
 	end,
