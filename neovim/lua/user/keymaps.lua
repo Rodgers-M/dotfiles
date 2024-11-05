@@ -69,9 +69,9 @@ keymap("v", "<Down>", ":m '>+1<CR>gv=gv", opts)
 keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
 
--- nerdtreeToogle shortcut
-keymap("n", "<C-a>", ":NERDTreeToggle<CR>", opts)
-keymap("n", "<leader>r", ":NERDTreeFind<cr>", opts)
+-- NvimTreeToggle and NvimTreeFindFile shortcut
+keymap("n", "<C-a>", ":NvimTreeToggle<CR>", opts)
+keymap("n", "<leader>r", ":NvimTreeFindFile<cr>", opts)
 
 --telescope
 keymap("n", "<leader>ff", "<cmd>Telescope find_files<CR>", opts)

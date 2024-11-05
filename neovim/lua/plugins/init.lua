@@ -6,9 +6,6 @@ return {
 	-- status line
 	"itchyny/lightline.vim",
 
-	-- file explorer
-	"preservim/nerdtree",
-
 	{ "stevearc/dressing.nvim", event = "VeryLazy" },
 	-- Highlight yanked text
 	"machakann/vim-highlightedyank",
@@ -119,8 +116,6 @@ return {
 	-- end,
 	-- },
 
-	-- "gc" to comment visual regions/lines
-	-- { "numToStr/Comment.nvim", opts = {} },
 	{ "scrooloose/nerdcommenter" },
 
 	-- auto pairs
@@ -137,7 +132,4 @@ return {
 	--splits / windows management
 	"wesQ3/vim-windowswap",
 	{ "szw/vim-maximizer", keys = { { "<leader>mx", "<cmd>MaximizerToggle<CR>" } } },
-
-	-- file icons on nerdtree sidebar
-	-- "ryanoasis/vim-devicons",
 }
