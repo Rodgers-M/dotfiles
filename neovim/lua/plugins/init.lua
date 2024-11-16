@@ -22,6 +22,9 @@ return {
 	-- svelte
 	"leafOfTree/vim-svelte-plugin",
 
+	-- prisma
+	"prisma/vim-prisma",
+
 	{
 		"mrcjkb/rustaceanvim",
 		version = "^4", -- Recommended
