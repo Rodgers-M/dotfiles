@@ -20,6 +20,10 @@ return {
 		vim.api.nvim_create_autocmd({ "BufEnter", "BufWritePost", "InsertLeave" }, {
 			group = lint_augroup,
 			callback = function()
+				local git_root = vim.fn.finddir(".git", ".;")
+				if git_root ~= "" then
+					vim.fn.chdir(vim.fn.fnamemodify(git_root, ":h")) -- Set project root
+				end
 				lint.try_lint()
 			end,
 		})
