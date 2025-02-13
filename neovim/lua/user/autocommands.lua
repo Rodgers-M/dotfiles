@@ -54,13 +54,3 @@ vim.api.nvim_create_autocmd({ "CursorHold" }, {
 	command = "lua OpenDiagnosticIfNoFloat()",
 	group = "lsp_diagnostics_hold",
 })
-
--- ensure neovim working directory is always the same as the project
-vim.api.nvim_create_autocmd("BufEnter", {
-	callback = function()
-		local git_root = vim.fn.finddir(".git", ".;") -- Finds .git directory
-		if git_root ~= "" then
-			vim.fn.chdir(vim.fn.fnamemodify(git_root, ":h")) -- Moves to the parent folder
-		end
-	end,
-})
