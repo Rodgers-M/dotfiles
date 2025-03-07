@@ -15,17 +15,27 @@ return {
 			svelte = { "eslint" },
 		}
 
+		-- a temporaty fix for an error with the eslint command that it can't find eslint
+		lint.linters.eslint = {
+			cmd = "eslint",
+			args = {
+				"--format",
+				"json",
+				"--stdin-filename",
+				function()
+					return vim.fn.expand("%:p")
+				end,
+			},
+			cwd = function()
+				return vim.fn.expand("%:p:h") -- Use the directory of the current file
+			end,
+		}
+
 		local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })
 
 		vim.api.nvim_create_autocmd({ "BufEnter", "BufWritePost" }, {
 			group = lint_augroup,
 			callback = function()
-				-- setting this back to root directory because of an error happening
-				-- on the BufWritePost event  autocomands,  ( autocomands for '*', no such file or directory)
-				local git_root = vim.fn.finddir(".git", ".;")
-				if git_root ~= "" then
-					vim.fn.chdir(vim.fn.fnamemodify(git_root, ":h")) -- Set project root
-				end
 				lint.try_lint()
 			end,
 		})
