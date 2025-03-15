@@ -8,27 +8,11 @@ return {
 		local lint = require("lint")
 
 		lint.linters_by_ft = {
-			javascript = { "eslint" },
-			typescript = { "eslint" },
-			javascriptreact = { "eslint" },
-			typescriptreact = { "eslint" },
-			svelte = { "eslint" },
-		}
-
-		-- a temporaty fix for an error with the eslint command that it can't find eslint
-		lint.linters.eslint = {
-			cmd = "eslint",
-			args = {
-				"--format",
-				"json",
-				"--stdin-filename",
-				function()
-					return vim.fn.expand("%:p")
-				end,
-			},
-			cwd = function()
-				return vim.fn.expand("%:p:h") -- Use the directory of the current file
-			end,
+			javascript = { "eslint_d" },
+			typescript = { "eslint_d" },
+			javascriptreact = { "eslint_d" },
+			typescriptreact = { "eslint_d" },
+			svelte = { "eslint_d" },
 		}
 
 		local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })
