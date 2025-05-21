@@ -67,8 +67,8 @@ return {
 		-- (not in youtube nvim video)
 		local signs = { Error = " ", Warn = " ", Hint = "󰠠 ", Info = " " }
 		for type, icon in pairs(signs) do
-			local hl = "DiagnosticSign" .. type
-			vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
+			local name = "DiagnosticSign" .. type
+			vim.fn.sign_define(name, { text = icon, texthl = name, numhl = name })
 		end
 
 		-- configure html server
@@ -104,17 +104,14 @@ return {
 		})
 
 		-- configure svelte server
-		lspconfig["svelte"].setup({
+		lspconfig.svelte.setup({
 			capabilities = capabilities,
 			on_attach = function(client, bufnr)
 				on_attach(client, bufnr)
 
 				vim.api.nvim_create_autocmd("BufWritePost", {
-					pattern = { "*.js", "*.ts" },
 					callback = function(ctx)
-						if client.name == "svelte" then
-							client.notify("$/onDidChangeTsOrJsFile", { uri = ctx.file })
-						end
+						client.notify("$/onDidChangeTsOrJsFile", { uri = ctx.match })
 					end,
 				})
 			end,
