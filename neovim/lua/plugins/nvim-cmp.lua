@@ -23,10 +23,8 @@ return {
 			return col == 0 or vim.fn.getline("."):sub(col, col):match("%s")
 		end
 
-		-- loads vscode style snippets from installed plugins (e.g. friendly-snippets)
+		-- loads vscode style snippets from installed plugins (e.g. friendly-snippets, vim-react-snippets)
 		require("luasnip.loaders.from_vscode").lazy_load()
-		-- load react snippets
-		require("vim-react-snippets").lazy_load()
 
 		cmp.setup({
 			completion = {
